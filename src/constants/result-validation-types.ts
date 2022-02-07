@@ -1,4 +1,4 @@
-export const ResultTypes = {
+export const ResultValidationTypes = {
   SUCCESS: "SUCCESS",
   WARNING: "WARNING",
   ERROR: "ERROR",

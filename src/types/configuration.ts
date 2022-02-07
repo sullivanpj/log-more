@@ -1,10 +1,33 @@
-import { LogEvent, LogEventType } from "./log";
+import { WriteLogEventFunction } from "./log";
+import { ResultValidationType } from "./result";
+
+export type CustomEventTypeDetails = {
+  /**
+   * The function to be called when logging the event
+   */
+  writeLogEventFunction: WriteLogEventFunction;
+
+  /**
+   * The result-type of the event (this will be used to determine if we should consider the result a success, warning, or error)
+   */
+  validationType: ResultValidationType;
+
+  /**
+   * An object that is thrown if this event occurs. If nothing is provided, nothing will be thrown.
+   */
+  throwOnEvent?: any;
+};
 
 export type Configuration = {
   /**
-   * The function that will be used to write the events to the logs. Can be overridden by the user to apply custom logging. The default functionality will try to write to the console.
+   * The default function that will be used to write the events to the logs. Can be overridden by the user to apply custom logging. The default functionality will try to write to the console.
    */
-  writeLogEvent: (logEvent: LogEvent) => any;
+  writeLogEvent: WriteLogEventFunction;
+
+  /**
+   * A look-up dictionary that uses Custom user defined Log Event Type strings as keys and an object with details about that event as the value
+   */
+  eventTypeRegistry: Record<string, CustomEventTypeDetails>;
 
   /**
    * A prefix string to prepend to the start of all log messages
@@ -24,7 +47,7 @@ export type Configuration = {
   /**
    * The default LogEventType to be used when none is provided
    */
-  defaultLogEventType: LogEventType;
+  defaultLogEventType: string;
 
   /**
    * The default event source string to be used when none is provided

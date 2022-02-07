@@ -1,4 +1,4 @@
-export type ResultType = "SUCCESS" | "WARNING" | "ERROR";
+export type ResultValidationType = "SUCCESS" | "WARNING" | "ERROR";
 
 export type ResultParams = {
   /**
@@ -17,9 +17,14 @@ export type ResultParams = {
   message?: string;
 
   /**
-   * The type of the result
+   * The event type of the result
    */
-  type?: ResultType;
+  eventType?: string;
+
+  /**
+   * The validation result (SUCCESS, WARNING, ERROR)
+   */
+  validationType?: ResultValidationType;
 
   /**
    * An additional details string that will be printed to the logs
