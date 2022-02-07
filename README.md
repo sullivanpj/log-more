@@ -7,6 +7,7 @@
 - Includes a Result class that can be used to manage errors (or any other type of result) that are returned from any kind of function or process
 - Simplifies global application logging by allowing users to specify how and when logs should be written/handled
 - Provides various utility methods to handle Results return from functions/process and log information and performance metrics
+- Allow user to specify custom event types which will then drive how event handler logic and logging is executed
 
 ## Visit our [documentation](https://sullivanpj.github.io/log-more/) for more info, guides, API and more!
 
@@ -29,10 +30,11 @@ import { ConfigurationManager, validate, Log, Result } from 'log-more';
 Once the package has been installed, you can use the `ConfigurationManager` to specify how you want your application's logging to behave. 
 
 ```ts
-import { ConfigurationManager } from 'log-more';
+import { ConfigurationManager, LogEvent } from 'log-more';
 
-const writeLog = (logEvent: LogWriteParams, type?: LogEventType | undefined) => {
-  console.log(logEvent.message);
+const writeLog = (logEvent: LogEvent) => {
+  console.log("Event Type: " + logEvent.eventType);
+  console.log("Event Message: " + logEvent.message);
 }
 
 ConfigurationManager.setConfig({
@@ -57,6 +59,9 @@ Log.debug("This is an debug message.");
 Log.info("This is an info message.");
 Log.warn("This is an warn message.");
 Log.error("This is an error message.");
+
+// The below function call will use a user defined method to determine how this event is logged and which event handler logic is called
+Log.write("This is a custom event message.", "CUSTOM_EVENT_TYPE");
 ```
 
 More information on the Log utility can be found in our [documentation](https://sullivanpj.github.io/log-more/classes/Log.html).
@@ -89,6 +94,48 @@ if (!validate(success)) {
 const failure = someFailureFunction();
 if (!validate(failure)) {
   // This code will be hit
+}
+```
+
+## Custom User Defined Events
+
+:notebook: Log-More allows users to specify custom event types, handlers, and logging.
+
+When providing a configuration object to the `ConfigurationManager`, user's can specify the `eventTypeRegistry` parameter. This parameter allows user's to register custom event types with :notebook: Log-More that can be handled at a later time.
+
+```ts
+import { ConfigurationManager, LogEvent, ResultValidationTypes } from 'log-more';
+
+const writeCustomEventLog = (logEvent: LogEvent) => {
+  console.log(logEvent.message);
+}
+
+ConfigurationManager.setConfig({
+  eventTypeRegistry: {
+    CUSTOM_EVENT_TYPE: {
+      // Will be called to log this custom event type
+      writeLogEventFunction: writeCustomEventLog,
+      // Tell the validate function how to handle this event
+      validationType: ResultValidationTypes.ERROR,
+      // The specified object will be thrown if this event occurs (if nothing is specified in the throwOnEvent field, nothing will be thrown)
+      throwOnEvent: { message: "This object was thrown because we specified it" },
+    }
+  }
+});
+```
+
+After registering the custom event type with the `ConfigurationManager`, you can use it by returning `Result` objects with the type specified in the `eventType` field.
+
+```ts
+import { Result, validate } from 'log-more';
+
+const someCustomEventFunction = () => {
+  return new Result({ eventType: "CUSTOM_EVENT_TYPE" });
+};
+
+const result = someCustomEventFunction();
+if (!validate(result)) {
+  // This code will be hit if the validationType on the eventTypeRegistry is set to "ERROR" 
 }
 ```
 
