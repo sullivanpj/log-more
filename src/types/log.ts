@@ -1,4 +1,5 @@
 import { LogEventTypes } from "src/constants/log-event-types";
+import { ResultParams } from "src/types/result";
 
 export type LogEventType =
   | LogEventTypes.DEBUG
@@ -6,24 +7,23 @@ export type LogEventType =
   | LogEventTypes.WARNING
   | LogEventTypes.ERROR;
 
-export type LogEvent = {
+export type LogEvent = Omit<ResultParams, "type"> & {
   id: string;
-  name?: string;
   source?: string;
-  message: string;
   type: LogEventType;
-  detail?: string;
-  stack?: string;
 };
 
-export type WriteLogParam = Error | LogEvent | string;
+export type LogWriteParams = Error | LogEvent | string;
 
-export type LoggerConfig = {
+export type LogConfig = {
   writeLogEvent: (logEvent: LogEvent) => any;
-  logPrefix?: string;
-  logPostfix?: string;
+  logMessagePrefix?: string;
+  logMessagePostfix?: string;
   appendStack: boolean;
   defaultLogEventType: LogEventType;
+  defaultEventSource: string;
+  defaultResultName: string;
   logEventIdLength: number;
+  resultIdLength: number;
   context?: any;
 };
