@@ -1,13 +1,14 @@
 import { Configuration } from "../types/configuration";
 import { writeToConsole } from "../utils/writeToConsole";
-import { LogEventTypes } from "./log-event-types";
+import { LogEventBaseTypes } from "./log-event-base-types";
 
 export const DefaultConfiguration: Configuration = {
   writeLogEvent: writeToConsole,
+  eventTypeRegistry: {},
   appendStack: true,
   logEventIdLength: 32,
   resultIdLength: 32,
-  defaultLogEventType: LogEventTypes.ERROR,
+  defaultLogEventType: LogEventBaseTypes.ERROR,
   defaultEventSource: "Application",
   defaultResultName: "APPLICATION_INITIATED_EVENT",
   defaultErrorResultMessage:

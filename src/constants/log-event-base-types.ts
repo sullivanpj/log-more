@@ -1,4 +1,4 @@
-export const LogEventTypes = {
+export const LogEventBaseTypes = {
   DEBUG: "DEBUG",
   INFO: "INFO",
   WARNING: "WARNING",

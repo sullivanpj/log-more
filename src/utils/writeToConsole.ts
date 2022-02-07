@@ -1,31 +1,38 @@
-import { LogWriteParams, LogEventType, LogEvent } from "../types/log";
-import { LogEventTypes } from "../constants/log-event-types";
+import { LogWriteParams, LogEvent } from "../types/log";
+import { LogEventBaseTypes } from "../constants/log-event-base-types";
 
 /**
  * A method to write events directly to the console (ignoring the writeLogEvent method specified in the configuration)
  * @param logEvent The event to write to the logs
- * @param type  Override the type set on the param object
+ * @param eventType  Override the event type set on the param object
  */
 export const writeToConsole = (
   logEvent: LogWriteParams,
-  type?: LogEventType
+  eventType?: string
 ) => {
   try {
-    const eventType = type
-      ? type
-      : typeof logEvent !== "string" && (logEvent as LogEvent)?.type
-      ? (logEvent as LogEvent).type
-      : LogEventTypes.ERROR;
     const message = typeof logEvent === "string" ? logEvent : logEvent.message;
 
-    if (eventType === LogEventTypes.DEBUG) {
-      console.debug(message);
-    } else if (eventType === LogEventTypes.INFO) {
-      console.info(message);
-    } else if (eventType === LogEventTypes.WARNING) {
-      console.warn(message);
-    } else {
-      console.error(message);
+    switch (
+      eventType
+        ? eventType
+        : typeof logEvent !== "string" && (logEvent as LogEvent)?.eventType
+        ? (logEvent as LogEvent).eventType
+        : LogEventBaseTypes.ERROR
+    ) {
+      case LogEventBaseTypes.DEBUG:
+        console.debug(message);
+        break;
+      case LogEventBaseTypes.INFO:
+        console.info(message);
+        break;
+      case LogEventBaseTypes.WARNING:
+        console.warn(message);
+        break;
+      case LogEventBaseTypes.ERROR:
+      default:
+        console.error(message);
+        break;
     }
   } catch (e) {
     console.error(e);
