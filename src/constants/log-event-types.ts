@@ -1,6 +1,6 @@
 export const LogEventTypes = {
-  DEBUG: 0,
-  INFO: 1,
-  WARNING: 2,
-  ERROR: 3
+  DEBUG: "DEBUG",
+  INFO: "INFO",
+  WARNING: "WARNING",
+  ERROR: "ERROR",
 } as const;
