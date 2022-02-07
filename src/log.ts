@@ -1,67 +1,13 @@
-import { LogEventTypes } from "src/constants/log-event-types";
-import {
-  LogEvent,
-  LogEventType,
-  LogWriteParams,
-  LogConfig,
-} from "src/types/log";
+import { LogEventTypes } from "./constants/log-event-types";
+import { LogEvent, LogEventType, LogWriteParams, LogConfig } from "./types/log";
 import { nanoid } from "nanoid";
-import { LogDefaultConfig } from "src/constants/log-default-config";
-import { writeToConsole } from "src/utils/writeToConsole";
+import { writeToConsole } from "./utils/writeToConsole";
+import { ConfigurationManager } from "./configuration-manager";
 
-const instanceId = nanoid(32);
-
+/**
+ * A static class used to process logging
+ */
 export class Log {
-  public static setConfig(params?: Partial<LogConfig>) {
-    try {
-      let config = { ...LogDefaultConfig };
-      if (params?.writeLogEvent) {
-        config.writeLogEvent = params.writeLogEvent;
-      }
-      if (params?.logMessagePrefix !== undefined) {
-        config.logMessagePrefix = params.logMessagePrefix;
-      }
-      if (params?.logMessagePostfix !== undefined) {
-        config.logMessagePostfix = params.logMessagePostfix;
-      }
-      if (params?.appendStack !== undefined) {
-        config.appendStack = params.appendStack;
-      }
-      if (params?.context !== undefined) {
-        config.context = params.context;
-      }
-
-      (global as any)[instanceId] = config;
-    } catch (e) {
-      // Use console here to prevent infinite recursion loop
-      Log.writeToConsole(
-        `An error occurred saving the log-more configuration: ${
-          (e as Error)?.message
-        }`
-      );
-    }
-  }
-
-  public static getConfig(): LogConfig {
-    try {
-      let config = (global as any)?.[instanceId];
-      if (!config) {
-        config = LogDefaultConfig;
-      }
-
-      return { ...config };
-    } catch (e) {
-      // Use console here to prevent infinite recursion loop
-      Log.writeToConsole(
-        `An error occurred retrieving the log-more configuration: ${
-          (e as Error)?.message
-        }`
-      );
-
-      return LogDefaultConfig;
-    }
-  }
-
   /**
    * Log an error using the configured logging methods
    * @param error An object or string containing the error to log
@@ -102,6 +48,11 @@ export class Log {
     } catch (e) {}
   }
 
+  /**
+   * Write the passed in params to the logs
+   * @param param The event/result to write to the logs
+   * @param type Override the type set on the param object
+   */
   public static write(param: LogWriteParams, type?: LogEventType) {
     try {
       const {
@@ -111,31 +62,29 @@ export class Log {
         appendStack,
         logMessagePrefix,
         logMessagePostfix,
-      }: LogConfig = Log.getConfig();
+        context,
+      }: LogConfig = ConfigurationManager.getConfig();
 
       let logEvent: LogEvent;
       if (typeof param === "string") {
         logEvent = {
           id: nanoid(logEventIdLength),
           message: param,
-          type,
+          type: type ?? defaultLogEventType,
         };
       } else {
         logEvent = {
           id: nanoid(logEventIdLength),
           ...param,
-          type,
+          type: (param as LogEvent)?.type ?? type ?? defaultLogEventType,
         };
       }
 
-      if (!logEvent.message) {
+      if (!logEvent.message || !logEvent.type) {
         // Return no message to log
         return;
       }
 
-      if (!logEvent.type) {
-        logEvent.type = defaultLogEventType;
-      }
       if (!logEvent.source) {
         logEvent.source = defaultEventSource;
       }
@@ -148,16 +97,33 @@ export class Log {
       if (logMessagePostfix) {
         logEvent.message += logMessagePostfix;
       }
+      if (!logEvent.context) {
+        logEvent.context = context;
+      }
 
       Log.writeLogEvent(logEvent);
     } catch (e) {
-      return e;
+      // Use console here to prevent infinite recursion loop
+      Log.writeToConsole(e as Error);
     }
   }
 
+  /**
+   * A method to write events directly to the console (ignoring the writeLogEvent method specified in the configuration)
+   * @param logEvent The event to write to the logs
+   * @param type  Override the type set on the param object
+   */
+  public static writeToConsole(logEvent: LogWriteParams, type?: LogEventType) {
+    writeToConsole(logEvent, type);
+  }
+
+  /**
+   * Private write method used internally by Log
+   * @param logEvent The event to write to the logs
+   */
   private static writeLogEvent(logEvent: LogEvent) {
     try {
-      const { writeLogEvent }: LogConfig = Log.getConfig();
+      const { writeLogEvent }: LogConfig = ConfigurationManager.getConfig();
 
       if (!!writeLogEvent) {
         writeLogEvent(logEvent);
@@ -165,13 +131,8 @@ export class Log {
         Log.writeToConsole(logEvent);
       }
     } catch (e) {
-      return Log.writeToConsole(e as Error);
+      // Use console here to prevent infinite recursion loop
+      Log.writeToConsole(e as Error);
     }
   }
-
-  public static writeToConsole(logEvent: LogWriteParams, type?: LogEventType) {
-    writeToConsole(logEvent, type);
-  }
 }
-
-export default Log;

@@ -1,32 +1,6 @@
-import { ResultParams } from "../types/result";
+import { LogEvent, LogEventType } from "./log";
 
-export type LogEventType = "DEBUG" | "INFO" | "WARNING" | "ERROR";
-
-export type LogEvent = Omit<ResultParams, "type"> & {
-  /**
-   * A unique string that can be used to identify the event
-   */
-  id: string;
-
-  /**
-   * A string representing the source that initiated the event
-   */
-  source?: string;
-
-  /**
-   * The type of the event
-   */
-  type: LogEventType;
-
-  /**
-   * A free-format object that will be added to all LogEvent objects to be used in custom logic added by the user in writeLogEvent.
-   */
-  context?: any;
-};
-
-export type LogWriteParams = Error | LogEvent | string;
-
-export type LogConfig = {
+export type Configuration = {
   /**
    * The function that will be used to write the events to the logs. Can be overridden by the user to apply custom logging. The default functionality will try to write to the console.
    */

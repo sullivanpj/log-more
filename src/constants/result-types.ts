@@ -1,5 +1,5 @@
 export const ResultTypes = {
-  SUCCESS: 0,
-  WARNING: 1,
-  ERROR: 2,
+  SUCCESS: "SUCCESS",
+  WARNING: "WARNING",
+  ERROR: "ERROR",
 } as const;
