@@ -1,43 +1,43 @@
 {
-    "projectFolder": ".",
-    "mainEntryPointFilePath": "C:/Development/libs/log-more/build/index.d.ts",
-    "bundledPackages": [],
-    "compiler": {
-      "tsconfigFilePath": "C:/Development/libs/log-more/tsconfig.json",
-      "overrideTsconfig": {
-        "compilerOptions": {
-          "outDir": "build"
-        }
+  "projectFolder": ".",
+  "mainEntryPointFilePath": "C:/Development/libs/log-more/build/index.d.ts",
+  "bundledPackages": [],
+  "compiler": {
+    "tsconfigFilePath": "C:/Development/libs/log-more/tsconfig.json",
+    "overrideTsconfig": {
+      "compilerOptions": {
+        "outDir": "build"
+      }
+    }
+  },
+  "dtsRollup": {
+    "enabled": true,
+    "untrimmedFilePath": "C:/Development/libs/log-more/dist/index.d.ts"
+  },
+  "apiReport": {
+    "enabled": false
+  },
+  "docModel": {
+    "enabled": false
+  },
+  "tsdocMetadata": {
+    "enabled": false
+  },
+  "messages": {
+    "compilerMessageReporting": {
+      "default": {
+        "logLevel": "none"
       }
     },
-    "dtsRollup": {
-      "enabled": true,
-      "untrimmedFilePath": "C:/Development/libs/log-more/dist/index.d.ts"
+    "extractorMessageReporting": {
+      "default": {
+        "logLevel": "none"
+      }
     },
-    "apiReport": {
-      "enabled": false
-    },
-    "docModel": {
-      "enabled": false
-    },
-    "tsdocMetadata": {
-      "enabled": false
-    },
-    "messages": {
-      "compilerMessageReporting": {
-        "default": {
-          "logLevel": "none"
-        }
-      },
-      "extractorMessageReporting": {
-        "default": {
-          "logLevel": "none"
-        }
-      },
-      "tsdocMessageReporting": {
-        "default": {
-          "logLevel": "none"
-        }
+    "tsdocMessageReporting": {
+      "default": {
+        "logLevel": "none"
       }
     }
   }
+}

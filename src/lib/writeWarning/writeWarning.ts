@@ -11,5 +11,5 @@ import { write } from "src/lib/write";
  * @returns A result object indicating if the process was successful or not
  */
 export const writeWarning = (warning: LogWriteParams): Result => {
-    return write(warning, LogEventBaseTypes.WARNING);
+  return write(warning, LogEventBaseTypes.WARNING);
 };

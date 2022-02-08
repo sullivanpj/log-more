@@ -1,0 +1,1965 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.19.4",
+    "schemaVersion": 1004,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      }
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "log-more!",
+  "docComment": "",
+  "name": "log-more",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "log-more!",
+      "name": "",
+      "members": [
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!Configuration:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type Configuration = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    writeLogEvent: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WriteLogEventFunction",
+              "canonicalReference": "log-more!WriteLogEventFunction:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    eventTypeRegistry: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, "
+            },
+            {
+              "kind": "Reference",
+              "text": "CustomEventTypeDetails",
+              "canonicalReference": "log-more!CustomEventTypeDetails:type"
+            },
+            {
+              "kind": "Content",
+              "text": ">;\n    logMessagePrefix?: string;\n    logMessagePostfix?: string;\n    appendStack: boolean;\n    defaultEventType: string;\n    defaultValidationType: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ResultValidationType",
+              "canonicalReference": "log-more!ResultValidationType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    defaultEventSource: string;\n    defaultResultName: string;\n    defaultErrorResultMessage: string;\n    logEventIdLength: number;\n    resultIdLength: number;\n    failValidateOnWarning: boolean;\n    failValidateOnEmpty: boolean;\n    context?: any;\n    templateTokenStart: string;\n    templateTokenStop: string;\n    timestampFormat: string;\n    locale?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Locale_2",
+              "canonicalReference": "!\"\\\"date-fns\\\"\".Locale:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    defaultFormatTemplate?: string;\n    userId: string;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Configuration",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 12
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "log-more!ConfigurationManager:class",
+          "docComment": "/**\n * A static class used to manage the log-more configuration data\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class ConfigurationManager "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ConfigurationManager",
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!ConfigurationManager.getConfig:member(1)",
+              "docComment": "/**\n * Get the current log configuration object\n *\n * @returns The logging configuration object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static getConfig(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Configuration_2",
+                  "canonicalReference": "log-more!Configuration:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "IIndexable_2",
+                  "canonicalReference": "log-more!IIndexable:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "getConfig"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!ConfigurationManager.getConfigItem:member(1)",
+              "docComment": "/**\n * Get the current log configuration object\n *\n * @returns The logging configuration object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static getConfigItem(name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "getConfigItem"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!ConfigurationManager.getEventTypeRegistry:member(1)",
+              "docComment": "/**\n * Get the current log configuration object\n *\n * @returns The logging configuration object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static getEventTypeRegistry(eventType: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CustomEventTypeDetails_2",
+                  "canonicalReference": "log-more!CustomEventTypeDetails:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "eventType",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "getEventTypeRegistry"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!ConfigurationManager.setConfig:member(1)",
+              "docComment": "/**\n * Set the configuration for how logging should be handled\n *\n * @param params - The configuration to use for logging going forward\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static setConfig(params?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Partial",
+                  "canonicalReference": "!Partial:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Configuration_2",
+                  "canonicalReference": "log-more!Configuration:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result_2",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "params",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  }
+                }
+              ],
+              "name": "setConfig"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!ConfigurationManager.setConfigItem:member(1)",
+              "docComment": "/**\n * Get the current log configuration object\n *\n * @returns The logging configuration object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static setConfigItem(name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result_2",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                }
+              ],
+              "name": "setConfigItem"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!CustomEventTypeDetails:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type CustomEventTypeDetails = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    writeLogEvent: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WriteLogEventFunction",
+              "canonicalReference": "log-more!WriteLogEventFunction:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    validationType: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ResultValidationType",
+              "canonicalReference": "log-more!ResultValidationType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    throwOnEvent?: any;\n    formatTemplate?: string;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "CustomEventTypeDetails",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!formatLogMessage:var",
+          "docComment": "/**\n * A type-check function to verify if the passed in object is a Result object\n *\n * @param param - The object that will have it's typed verified\n *\n * @returns A boolean indicator specifying if the passed in object's type is Result\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "formatLogMessage: "
+            },
+            {
+              "kind": "Content",
+              "text": "(logEvent: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogEvent_2",
+              "canonicalReference": "log-more!LogEvent:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "formatLogMessage",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!formatTemplateToken:var",
+          "docComment": "/**\n * Formats a template field into a token string that can be identified by the log formatter\n *\n * @param templateTokenField - The template field name to be used in formatting the token\n *\n * @param templateTokenStart - Optional parameter for the template token start string\n *\n * @param templateTokenStop - Optional parameter for the template token end string\n *\n * @returns The formatted template token\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "formatTemplateToken: "
+            },
+            {
+              "kind": "Content",
+              "text": "(templateTokenField: string, templateTokenStart?: string | undefined, templateTokenStop?: string | undefined) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "formatTemplateToken",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "log-more!IIndexable:interface",
+          "docComment": "/**\n * @format\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare interface IIndexable "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "IIndexable",
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "log-more!IIndexable:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[index: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "index",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!isResult:var",
+          "docComment": "/**\n * A type-check function to verify if the passed in object is a Result object\n *\n * @param param - The object that will have it's typed verified\n *\n * @returns A boolean indicator specifying if the passed in object's type is Result\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isResult: "
+            },
+            {
+              "kind": "Content",
+              "text": "(param: any) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "param",
+              "canonicalReference": "log-more!~param"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "isResult",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "log-more!ITypedIndexable:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare interface ITypedIndexable<T> "
+            }
+          ],
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "ITypedIndexable",
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "log-more!ITypedIndexable:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[index: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "index",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!LogEvent:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type LogEvent = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Omit",
+              "canonicalReference": "!Omit:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ResultParams",
+              "canonicalReference": "log-more!ResultParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", \"type\"> & {\n    id: string;\n    source?: string;\n    eventType: string;\n    formatted?: string;\n    context?: any;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "LogEvent",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!LogWriteParams:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type LogWriteParams = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Error",
+              "canonicalReference": "!Error:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogEvent",
+              "canonicalReference": "log-more!LogEvent:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "LogWriteParams",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "log-more!Result:class",
+          "docComment": "/**\n * A class used to handle the result of a function call or sub-process. Functions/process should return back this object so that the calling function can evaluate it's success.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class Result<TReturnValues = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "> extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Error",
+              "canonicalReference": "!Error:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "TReturnValues",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "Result",
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "log-more!Result:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `Result` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(params: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ResultParams_2",
+                  "canonicalReference": "log-more!ResultParams:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<TReturnValues> | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Error",
+                  "canonicalReference": "!Error:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "params",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result.create:member(1)",
+              "docComment": "/**\n * A helper function to create a result object\n *\n * @param params - The parameters used to create the result object\n *\n * @returns The created result object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static create(params: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Omit",
+                  "canonicalReference": "!Omit:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ResultParams_2",
+                  "canonicalReference": "log-more!ResultParams:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", \"userId\"> | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Error",
+                  "canonicalReference": "!Error:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "params",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 6
+                  }
+                }
+              ],
+              "name": "create"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#details:member",
+              "docComment": "/**\n * A field specifying additional information to be added to the log\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "details?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "details",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result.error:member(1)",
+              "docComment": "/**\n * A helper function to return back an error result\n *\n * @param error - The error details to assign to the result object\n *\n * @param eventType - The event type to assign to the result object\n *\n * @returns The result object specifying the error\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static error(error?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", eventType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "error",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "eventType",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                }
+              ],
+              "name": "error"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#eventType:member",
+              "docComment": "/**\n * The event type of the result\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "eventType: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "eventType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#id:member",
+              "docComment": "/**\n * The string ID used to identify the specific result object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#instanceId:member",
+              "docComment": "/**\n * A string ID used in identifying if the object is a result\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "instanceId: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "instanceId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#isFailure:member",
+              "docComment": "/**\n * Is the result a failure\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get isFailure(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isFailure",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#isSuccessful:member",
+              "docComment": "/**\n * Is the result successful\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get isSuccessful(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isSuccessful",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result.notify:member(1)",
+              "docComment": "/**\n * A helper function to return back a result with a message to log\n *\n * @param message - The message details to assign to the result object\n *\n * @param values - The return values to be added to the result object\n *\n * @param eventType - The event type to assign to the result object\n *\n * @returns The result object specifying the message\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static notify(message?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", values?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", eventType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "message",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "values",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "eventType",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  }
+                }
+              ],
+              "name": "notify"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result.success:member(1)",
+              "docComment": "/**\n * A helper function to return back a success result\n *\n * @param values - The return values to be added to the result object\n *\n * @param eventType - The event type to assign to the result object\n *\n * @returns The result object specifying the function execution was successful\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static success(values?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", eventType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "values",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "eventType",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                }
+              ],
+              "name": "success"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result#toString:member(1)",
+              "docComment": "/**\n * @returns Returns the result message string\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toString(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "toString"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#userId:member",
+              "docComment": "/**\n * A string that can be used to represent the current user performing actions in the application/triggering processes\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "userId: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "userId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#validationType:member",
+              "docComment": "/**\n * The validation type of the result\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validationType: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ResultValidationType_2",
+                  "canonicalReference": "log-more!ResultValidationType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "validationType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "log-more!Result#values:member",
+              "docComment": "/**\n * A field containing the values returned from the function call\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "values?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "TReturnValues"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "values",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "log-more!Result.warning:member(1)",
+              "docComment": "/**\n * A helper function to return back an warning result\n *\n * @param warning - The warning details to assign to the result object\n *\n * @param values - The return values to be added to the result object\n *\n * @param eventType - The event type to assign to the result object\n *\n * @returns The result object specifying the warning\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static warning(warning?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", values?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", eventType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Result",
+                  "canonicalReference": "log-more!Result:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "warning",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "values",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "eventType",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  }
+                }
+              ],
+              "name": "warning"
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!ResultParams:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type ResultParams<TReturnValues = "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    id?: string;\n    name?: string;\n    message?: string;\n    eventType?: string;\n    validationType?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ResultValidationType",
+              "canonicalReference": "log-more!ResultValidationType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    details?: string;\n    stack?: string;\n    values?: TReturnValues;\n    userId: string;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ResultParams",
+          "typeParameters": [
+            {
+              "typeParameterName": "TReturnValues",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!ResultValidationType:type",
+          "docComment": "/**\n * @format\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type ResultValidationType = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"SUCCESS\" | \"WARNING\" | \"ERROR\""
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ResultValidationType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!validate:var",
+          "docComment": "/**\n * Validate the result object to determine if the previously called process was successful\n *\n * @param result - The result object to validate\n *\n * @param type - The type of result we are validating the result parameter's type value is set to (defaults to \"SUCCESS\")\n *\n * @param isLogging - Should a log be written (if message is provided)\n *\n * @returns An indicator specifying if the result was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "validate: "
+            },
+            {
+              "kind": "Content",
+              "text": "(result: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", validationType?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ResultValidationType_2",
+              "canonicalReference": "log-more!ResultValidationType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", isLogging?: boolean) => boolean"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "validate",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!write:var",
+          "docComment": "/**\n * Write the passed in params to the logs\n *\n * @param param - The event/result to write to the logs\n *\n * @param eventType - Override the event type set on the param object\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "write: "
+            },
+            {
+              "kind": "Content",
+              "text": "(param: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", eventType?: string | undefined) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "write",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeDebug:var",
+          "docComment": "/**\n * Log an debug message using the configured logging methods\n *\n * @param debug - An object or string containing the info message to log\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeDebug: "
+            },
+            {
+              "kind": "Content",
+              "text": "(debug: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeDebug",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeError:var",
+          "docComment": "/**\n * Log an error using the configured logging methods\n *\n * @param error - An object or string containing the error to log\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeError: "
+            },
+            {
+              "kind": "Content",
+              "text": "(error: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeError",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeInfo:var",
+          "docComment": "/**\n * Log an info message using the configured logging methods\n *\n * @param info - An object or string containing the info message to log\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeInfo: "
+            },
+            {
+              "kind": "Content",
+              "text": "(info: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeInfo",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeLogEvent:var",
+          "docComment": "/**\n * Private write method used internally by Log\n *\n * @param logEvent - The event to write to the logs\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeLogEvent: "
+            },
+            {
+              "kind": "Content",
+              "text": "(logEvent: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogEvent_2",
+              "canonicalReference": "log-more!LogEvent:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeLogEvent",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "log-more!WriteLogEventFunction:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type WriteLogEventFunction = "
+            },
+            {
+              "kind": "Content",
+              "text": "(logEvent: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogEvent",
+              "canonicalReference": "log-more!LogEvent:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "WriteLogEventFunction",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeToConsole:var",
+          "docComment": "/**\n * A method to write events directly to the console (ignoring the writeLogEvent method specified in the configuration)\n *\n * @param params - The event to write to the logs\n *\n * @param eventType - Override the type set on the param object\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeToConsole: "
+            },
+            {
+              "kind": "Content",
+              "text": "(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", eventType?: string | undefined) => void"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeToConsole",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "log-more!writeWarning:var",
+          "docComment": "/**\n * Log a warning using the configured logging methods\n *\n * @param warning - An object or string containing the warning to log\n *\n * @returns A result object indicating if the process was successful or not\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "writeWarning: "
+            },
+            {
+              "kind": "Content",
+              "text": "(warning: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LogWriteParams_2",
+              "canonicalReference": "log-more!LogWriteParams:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Result_2",
+              "canonicalReference": "log-more!Result:class"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "writeWarning",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        }
+      ]
+    }
+  ]
+}
