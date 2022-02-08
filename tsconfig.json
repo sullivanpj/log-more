@@ -7,8 +7,6 @@
     "esModuleInterop": true,
     "strictNullChecks": true,
     "baseUrl": ".",
-    "lib": [
-      "ES2021.String"
-    ]
+    "lib": ["ES2021.String"]
   }
 }
