@@ -17,6 +17,11 @@ export type LogEvent = Omit<ResultParams, "type"> & {
   eventType: string;
 
   /**
+   * The formatted log event message
+   */
+  formatted?: string;
+
+  /**
    * A free-format object that will be added to all LogEvent objects to be used in custom logic added by the user in writeLogEvent.
    */
   context?: any;

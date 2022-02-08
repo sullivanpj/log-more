@@ -1,6 +1,3 @@
-export * from "./types/configuration";
-export * from "./types/log";
-export * from "./types/result";
+export * from "./types";
 export * from "./configuration-manager";
-export * from "./log";
 export * from "./result";

@@ -6,6 +6,9 @@
     "strict": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "lib": [
+      "ES2021.String"
+    ]
   }
 }

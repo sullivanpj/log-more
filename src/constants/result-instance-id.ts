@@ -1,3 +1,3 @@
 import { nanoid } from "nanoid";
 
-export const resultInstanceId = nanoid(32);
+export const ResultInstanceId = nanoid(32);

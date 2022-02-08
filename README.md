@@ -3,11 +3,13 @@
 :notebook: Log-More is a lightweight javascript library to enhance logging and provide error checking in function return types
 
 # Features
+
 - Provides a logger utility to extend build-in logging functionality
 - Includes a Result class that can be used to manage errors (or any other type of result) that are returned from any kind of function or process
 - Simplifies global application logging by allowing users to specify how and when logs should be written/handled
 - Provides various utility methods to handle Results return from functions/process and log information and performance metrics
 - Allow user to specify custom event types which will then drive how event handler logic and logging is executed
+- Format log messages using custom string templates provided by the user
 
 ## Visit our [documentation](https://sullivanpj.github.io/log-more/) for more info, guides, API and more!
 
@@ -22,20 +24,20 @@ $ npm i log-more --save
 Once it is installed, you can import and use the `log-more` helper utilities and classes:
 
 ```js
-import { ConfigurationManager, validate, Log, Result } from 'log-more';
+import { ConfigurationManager, validate, Log, Result } from "log-more";
 ```
 
 # Configuration
 
-Once the package has been installed, you can use the `ConfigurationManager` to specify how you want your application's logging to behave. 
+Once the package has been installed, you can use the `ConfigurationManager` to specify how you want your application's logging to behave.
 
 ```ts
-import { ConfigurationManager, LogEvent } from 'log-more';
+import { ConfigurationManager, LogEvent } from "log-more";
 
 const writeLog = (logEvent: LogEvent) => {
   console.log("Event Type: " + logEvent.eventType);
   console.log("Event Message: " + logEvent.message);
-}
+};
 
 ConfigurationManager.setConfig({
   writeLogEvent: writeLog,
@@ -50,17 +52,18 @@ The full list of configuration parameters can be found in our [documentation](ht
 
 # Logging
 
-:notebook: Log-More provides the user with a Log object that will use the configuration parameters previously provided by the user to write logs. 
+:notebook: Log-More provides the user with a Log object that will use the configuration parameters previously provided by the user to write logs.
 
 ```ts
-import { Log } from 'log-more';
+import { Log } from "log-more";
 
 Log.debug("This is an debug message.");
 Log.info("This is an info message.");
 Log.warn("This is an warn message.");
 Log.error("This is an error message.");
 
-// The below function call will use a user defined method to determine how this event is logged and which event handler logic is called
+// The below function call will use a user defined method to determine how
+// this event is logged and which event handler logic is called
 Log.write("This is a custom event message.", "CUSTOM_EVENT_TYPE");
 ```
 
@@ -68,10 +71,10 @@ More information on the Log utility can be found in our [documentation](https://
 
 # Error (and Any Other Type of Result) Handling
 
-The `Result` class provided by :notebook: Log-More can be used in any function or process to indicate success, failure, or something inbetween. 
+The `Result` class provided by :notebook: Log-More can be used in any function or process to indicate success, failure, or something in between.
 
 ```ts
-import { Result, validate } from 'log-more';
+import { Result, validate } from "log-more";
 
 const someSuccessfulFunction = () => {
   const returnValues = {
@@ -84,12 +87,16 @@ const someSuccessfulFunction = () => {
 
 const someFailureFunction = () => {
   return Result.error({ message: "The reason for the failure" });
-}
+};
 
 const success = someSuccessfulFunction();
 if (!validate(success)) {
   // This code will not be hit
 }
+
+// The values property will contain the values passed into Result.success function
+console.log(success.values);
+// > { value1: "foo", value2: "bar" }
 
 const failure = someFailureFunction();
 if (!validate(failure)) {
@@ -104,11 +111,15 @@ if (!validate(failure)) {
 When providing a configuration object to the `ConfigurationManager`, user's can specify the `eventTypeRegistry` parameter. This parameter allows user's to register custom event types with :notebook: Log-More that can be handled at a later time.
 
 ```ts
-import { ConfigurationManager, LogEvent, ResultValidationTypes } from 'log-more';
+import {
+  ConfigurationManager,
+  LogEvent,
+  ResultValidationTypes,
+} from "log-more";
 
 const writeCustomEventLog = (logEvent: LogEvent) => {
   console.log(logEvent.message);
-}
+};
 
 ConfigurationManager.setConfig({
   eventTypeRegistry: {
@@ -118,16 +129,18 @@ ConfigurationManager.setConfig({
       // Tell the validate function how to handle this event
       validationType: ResultValidationTypes.ERROR,
       // The specified object will be thrown if this event occurs (if nothing is specified in the throwOnEvent field, nothing will be thrown)
-      throwOnEvent: { message: "This object was thrown because we specified it" },
-    }
-  }
+      throwOnEvent: {
+        message: "This object was thrown because we specified it",
+      },
+    },
+  },
 });
 ```
 
 After registering the custom event type with the `ConfigurationManager`, you can use it by returning `Result` objects with the type specified in the `eventType` field.
 
 ```ts
-import { Result, validate } from 'log-more';
+import { Result, validate } from "log-more";
 
 const someCustomEventFunction = () => {
   return new Result({ eventType: "CUSTOM_EVENT_TYPE" });
@@ -135,9 +148,9 @@ const someCustomEventFunction = () => {
 
 const result = someCustomEventFunction();
 if (!validate(result)) {
-  // This code will be hit if the validationType on the eventTypeRegistry is set to "ERROR" 
+  // This code will be hit if the validationType on the eventTypeRegistry is set to "ERROR"
 }
 ```
 
-Please see the [Result section](https://sullivanpj.github.io/log-more/classes/Result.html) in our documentation for more info on this functionality.
+Please see the Result section in our [documentation](https://sullivanpj.github.io/log-more/classes/Result.html) for more details on this functionality.
 
