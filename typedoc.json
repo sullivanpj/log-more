@@ -1,4 +1,7 @@
 {
   "entryPoints": ["./src/index.ts"],
-  "out": "doc"
+  "out": "docs",
+  "name": "Log-More",
+  "readme": "./README.md",
+  "darkHighlightTheme": "dark-plus"
 }
