@@ -23,7 +23,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "api-extractor": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
-    "docs": "typedoc src --out docs",
+    "docs": "typedoc --options ./typedoc.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
