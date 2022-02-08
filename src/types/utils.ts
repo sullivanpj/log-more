@@ -1,7 +1,9 @@
+/** @format */
+
 export interface IIndexable {
-  [index: string]: any;
+    [index: string]: any;
 }
 
 export interface ITypedIndexable<T> {
-  [index: string]: T;
+    [index: string]: T;
 }

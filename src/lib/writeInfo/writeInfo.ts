@@ -1,7 +1,9 @@
-import { Result } from "../result";
-import { LogEventBaseTypes } from "../constants/log-event-base-types";
-import { LogWriteParams } from "../types/log";
-import { write } from "./write";
+/** @format */
+
+import { Result } from "src/result";
+import { LogEventBaseTypes } from "src/constants/log-event-base-types";
+import { LogWriteParams } from "src/types/log";
+import { write } from "src/lib/write";
 
 /**
  * Log an info message using the configured logging methods
@@ -9,5 +11,5 @@ import { write } from "./write";
  * @returns A result object indicating if the process was successful or not
  */
 export const writeInfo = (info: LogWriteParams): Result => {
-  return write(info, LogEventBaseTypes.INFO);
+    return write(info, LogEventBaseTypes.INFO);
 };
