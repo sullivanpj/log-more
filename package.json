@@ -1,7 +1,7 @@
 {
   "name": "log-more",
   "version": "1.0.0",
-  "description": "https://github.com/sullivanpj/log-more.git",
+  "description": " 📓 Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting. 📓 ",
   "author": "Patrick Sullivan <patrick.joseph.sullivan@protonmail.com> (http://www.sullypat.com)",
   "main": "dist/log-more.cjs.js",
   "module": "dist/log-more.esm.js",
