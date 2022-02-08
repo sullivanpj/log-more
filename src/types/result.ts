@@ -1,6 +1,6 @@
 export type ResultValidationType = "SUCCESS" | "WARNING" | "ERROR";
 
-export type ResultParams = {
+export type ResultParams<TReturnValues = any> = {
   /**
    * A unique string that can be used to identify the result
    */
@@ -39,5 +39,10 @@ export type ResultParams = {
   /**
    * A field containing any values returned from the function call
    */
-  values?: any;
+  values?: TReturnValues;
+
+  /**
+   * A string that can be used to represent the current user performing actions in the application/triggering processes
+   */
+  userId: string;
 };

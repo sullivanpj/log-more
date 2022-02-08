@@ -1,9 +1,10 @@
 import { Result } from "../result";
-import { Log } from "../log";
 import { isResult } from "./isResult";
 import { ConfigurationManager } from "../configuration-manager";
 import { ResultValidationTypes } from "../constants/result-validation-types";
-import { ResultValidationType } from "src/types/result";
+import { ResultValidationType } from "../types/result";
+import { write } from "./write";
+import { writeError } from "./writeError";
 
 /**
  * Validate the result object to determine if the previously called process was successful
@@ -27,7 +28,7 @@ export const validate = (
 
     // Write result message to logs
     if (isLogging) {
-      Log.write(result);
+      write(result);
     }
 
     if (
@@ -39,7 +40,7 @@ export const validate = (
 
     return result.validationType === validationType;
   } catch (e) {
-    Log.error(e as Error);
+    writeError(e as Error);
   }
 
   return false;
