@@ -1,6 +1,7 @@
 ![Log-More Logo](http://sullivanpj.com/images/log-more-banner.png)
 
-:notebook: Log-More is a lightweight javascript library to enhance logging and provide error checking in function return types
+📓 Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting. 📓 
+
 
 # Features
 
@@ -15,7 +16,7 @@
 
 - **Simple:** The APIs are extremely easy to use and include detailed [documentation](https://sullivanpj.github.io/log-more/) for all of the functionality
 - **Very Modular:** Package modules are separated by functionality/utility. Works with webpack, Browserify, or Rollup and also supports tree-shaking.
-- **TypeScript Support:** Log-More was created using TypeScript, so all the types associated with the package are fully supported and up to date
+- **TypeScript Support:** :notebook: Log-More was created using TypeScript, so all the types associated with the package are fully supported and up to date
 - [**And many more**](https://sullivanpj.github.io/log-more/)
 
 ## Visit our [documentation](https://sullivanpj.github.io/log-more/) for more info, guides, API and more!
