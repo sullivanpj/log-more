@@ -1,8 +1,8 @@
 <!-- @format -->
 
-![Log-More Logo](http://sullivanpj.com/images/log-more-banner.png)
+![Log-More Logo](https://sullivanpj.com/images/log-more-banner.png)
 
-📓 Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting. 📓
+📓Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.
 
 [![NPM Version](https://img.shields.io/npm/v/react-final-form.svg?style=for-the-badge&logo=appveyor)](https://www.npmjs.com/package/log-more)
 [![Build Status](https://img.shields.io/github/license/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
@@ -10,83 +10,6 @@
 [![Build Status](https://img.shields.io/github/issues/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sullivanpj/log-more?style=for-the-badge)](https://github.com/sullivanpj/log-more)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
-
-<style>{`
-  .subheading {
-    --mediumdark: '#999999';
-    font-weight: 900;
-    font-size: 13px;
-    color: #999;
-    letter-spacing: 6px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    margin-top: 40px;
-  }
-
-  .link-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-  }
-
-  @media (min-width: 620px) {
-    .link-list {
-      row-gap: 20px;
-      column-gap: 20px;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media all and (-ms-high-contrast:none) {
-  .link-list {
-      display: -ms-grid;
-      -ms-grid-columns: 1fr 1fr;
-      -ms-grid-rows: 1fr 1fr;
-    }
-  }
-
-  .link-item {
-    display: block;
-    padding: 20px 30px 20px 15px;
-    border: 1px solid #00000010;
-    border-radius: 5px;
-    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
-    color: #333333;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .link-item:hover {
-    border-color: #1EA7FD50;
-    transform: translate3d(0, -3px, 0);
-    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
-  }
-
-  .link-item:active {
-    border-color: #1EA7FD;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .link-item strong {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 2px;
-  }
-  
-  .link-item img {
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
-    flex: none;
-  }
-
-  .link-item span {
-    font-size: 14px;
-    line-height: 20px;
-  }
-`}</style>
 
 # Features
 
@@ -97,11 +20,11 @@
 - Allow user to specify custom event types which will then drive how event handler logic and logging is executed
 - Supports formatting of log event messages using custom string templates provided by the user
 
-## Some Benefits of Using 📓 Log-More
+## Some Benefits of Using 📓Log-More
 
 - **Simple:** The APIs are extremely easy to use and include detailed [documentation](https://sullivanpj.github.io/log-more/) for all of the functionality
 - **Very Modular:** Package modules are separated by functionality/utility. Works with webpack, Browserify, or Rollup and also supports tree-shaking.
-- **TypeScript Support:** 📓 Log-More was created using TypeScript, so all the types associated with the package are fully supported and up to date
+- **TypeScript Support:** Log-More was created using TypeScript, so all the types associated with the package are fully supported and up to date
 - [**And many more**](https://sullivanpj.github.io/log-more/)
 
 ## Visit our [documentation](https://sullivanpj.github.io/log-more/) for more info, guides, API and more!
@@ -119,7 +42,7 @@ $ yarn add log-more
 Once it is installed, you can import and use the `log-more` helper utilities and classes:
 
 ```js
-import { ConfigurationManager, validate, Log, Result } from "log-more";
+import { ConfigurationManager, validate, write, Result } from "log-more";
 ```
 
 # Configuration
@@ -145,7 +68,7 @@ ConfigurationManager.setConfig({
 
 The full list of configuration parameters can be found in our [documentation](https://sullivanpj.github.io/log-more/modules.html#Configuration).
 
-# Logging
+# 📓Logging📓
 
 Log-More provides the user with "write" logging utility methods that will use the [configuration](https://sullivanpj.github.io/log-more/modules.html#Configuration) parameters previously provided by the user to write logs.
 
@@ -218,8 +141,7 @@ if (!validate(successResult)) {
 }
 
 // The values property will contain the values passed into Result.success function
-console.log(success.values);
-// > { value1: "foo", value2: "bar" }
+console.log(success.values); -> { value1: "foo", value2: "bar" }
 
 const failure = someFailureFunction();
 if (failure.isFailure) {
@@ -233,9 +155,9 @@ write(failure);
 
 **NOTE:** In Log-More, event types and validation types are **NOT** the same. Event types are free-format strings that can be used to look up details on how the log event object should be handled/logged. There are a variable amount of possible event types, as the user is able to register as many or as few as they like. [Validation types](https://sullivanpj.github.io/log-more/modules.html#ResultValidationType) are defined through code (as a result, they have a fixed number of types) and are used to determine which path in code should be taken when an event occurs. The user-defined event types added in the [eventTypeRegistry](https://sullivanpj.github.io/log-more/modules.html#Configuration) will have a validation type associated with them. While there could be some overlap in the event and validation type values, they are not directly related to each other.
 
-<div className="subheading">Custom User Defined Events</div>
+## Custom User Defined Events
 
-📓 Log-More allows users to specify custom event types, handlers, and logging.
+📓Log-More allows users to specify custom event types, handlers, and logging.
 
 When providing a configuration object to the [ConfigurationManager](https://sullivanpj.github.io/log-more/classes/ConfigurationManager.html), user's can specify the [eventTypeRegistry](https://sullivanpj.github.io/log-more/modules.html#Configuration) parameter. This parameter allows users to [register](https://sullivanpj.github.io/log-more/modules.html#CustomEventTypeDetails) custom event types with Log-More that can be handled at a later time.
 
@@ -295,29 +217,72 @@ Log-More allows users to define their own custom templates to be used in [format
 
 The format templates are made up of template fields that are passed into the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) function to generate template field tokens. Creating the template field tokens in the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) function is a very straight forward process - essentially just pre-pending the templateTokenStart and appending the templateTokenStop strings from the [Configuration](https://sullivanpj.github.io/log-more/modules.html#Configuration) data around the field name. The below list of fields are available to include in a formatting template:
 
-|    **Field Name**     | **Template Field** |
-| :-------------------: | :----------------: |
-|      Event Type       |     EVENT_TYPE     |
-|    Validation Type    |  VALIDATION_TYPE   |
-|       Event ID        |         ID         |
-|      Event Name       |        NAME        |
-|     Event Source      |       SOURCE       |
-|        Context        |      CONTEXT       |
-|     Event Message     |      MESSAGE       |
-| Event Message Details |      DETAILS       |
-|      Stack Trace      |       STACK        |
-|        User ID        |      USER_ID       |
-| Timestamp (formatted) |     TIME_STAMP     |
+|    **Field Name**     | **Template Field**   |
+| :-------------------: | :-----------------:  |
+|      Event Type       |     EVENT_TYPE       |
+|    Validation Type    |  VALIDATION_TYPE     |
+|       Event ID        |         ID           |
+|      Event Name       |        NAME          |
+|     Event Source      |       SOURCE         |
+|        Context        |      CONTEXT         |
+|     Event Message     |      MESSAGE         |
+| Event Message Details |      DETAILS         |
+|      Stack Trace      |       STACK          |
+|        User ID        |      USER_ID         |
+| Timestamp (formatted) |     TIME_STAMP       |
 
 ```ts
-import { Result, validate, formatLogMessage } from "log-more";
+import { formatTemplateToken } from "log-more";
 
-const someCustomEventFunction = () => {
-  return new Result({ eventType: "CUSTOM_EVENT_TYPE" });
-};
+const templateToken = formatTemplateToken("EVENT_TYPE", "<-", "->");
 
-const result = someCustomEventFunction();
-if (!validate(result)) {
-  // This code will be hit if the validationType on the eventTypeRegistry is set to "ERROR"
+console.log(templateToken); -> [[+EVENT_TYPE-))
+```
+
+After the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) is used to create the template tokens, a template string can be generated and saved to the [ConfigurationManager](https://sullivanpj.github.io/log-more/classes/ConfigurationManager.html).
+
+```ts
+import { formatTemplateToken, ConfigurationManager, formatLogMessage } from "log-more";
+
+const sourceTemplateToken = "<-SOURCE->";
+const userIdTemplateToken = "<-USER_ID->";
+const messageTemplateToken = "<-MESSAGE->";
+const detailsTemplateToken = "<-DETAILS->";
+const timestampTemplateToken = "<-TIME_STAMP->";
+
+const result = ConfigurationManager.setConfigItem("defaultFormatTemplate", `*** Sample Log Template Header ***
+Event Source: ${defaultFormatTemplate}
+User ID: ${userIdTemplateToken}
+Timestamp (Est): ${timestampTemplateToken}
+
+${messageTemplateToken}
+------------------------
+${detailsTemplateToken}
+
+** A custom event log footer **
+`);
+if (result.isSuccessful) {
+  // Template was successfully saved to configuration 
+}
+
+  .
+  .
+  .
+
+const result = formatLogMessage(logEventObj);
+if (result.isSuccessful) {
+  console.log(result.values); -> `*** Sample Log Template Header ***
+Event Source: TRADE_INPUT_SYSTEM
+User ID: JohnsonR (Richard Johnson)
+Timestamp (Est): 12/15/2022 11:23:57 AM
+
+An error occurred while processing a transaction
+------------------------
+An unexpected value was provided for the transaction date and amount values. This transaction will require multiple levels of approval.
+
+** A custom event log footer **
+`
 }
 ```
+
+More details on creating templates and formatting logs can be found in our [documentation](https://sullivanpj.github.io/log-more/modules.html#formatLogMessage).

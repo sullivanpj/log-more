@@ -15,13 +15,13 @@
     "untrimmedFilePath": "C:/Development/libs/log-more/dist/index.d.ts"
   },
   "apiReport": {
-    "enabled": false
+    "enabled": true
   },
   "docModel": {
-    "enabled": false
+    "enabled": true
   },
   "tsdocMetadata": {
-    "enabled": false
+    "enabled": true
   },
   "messages": {
     "compilerMessageReporting": {
