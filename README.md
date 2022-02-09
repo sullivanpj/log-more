@@ -236,7 +236,7 @@ import { formatTemplateToken } from "log-more";
 
 const templateToken = formatTemplateToken("EVENT_TYPE", "<-", "->");
 
-console.log(templateToken); -> [[+EVENT_TYPE-))
+console.log(templateToken); -> "<-EVENT_TYPE->"
 ```
 
 After the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) is used to create the template tokens, a template string can be generated and saved to the [ConfigurationManager](https://sullivanpj.github.io/log-more/classes/ConfigurationManager.html).
