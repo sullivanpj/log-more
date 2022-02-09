@@ -3,5 +3,6 @@
   "out": "docs",
   "name": "Log-More",
   "readme": "./README.md",
+  "githubPages": false,
   "darkHighlightTheme": "dark-plus"
 }
