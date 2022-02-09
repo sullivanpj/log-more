@@ -8,31 +8,31 @@ import { LogEventBaseTypes } from "src/constants/log-event-base-types";
  * @param eventType  Override the event type set on the param object
  */
 export const writeStringToConsole = (
-    message?: string,
-    eventType: string = LogEventBaseTypes.ERROR
+  message?: string,
+  eventType: string = LogEventBaseTypes.ERROR
 ) => {
-    try {
-        if (!message) {
-            console.warn("No message passed to writeStringToConsole method");
-            return;
-        }
-
-        switch (eventType) {
-            case LogEventBaseTypes.DEBUG:
-                console.debug(message);
-                break;
-            case LogEventBaseTypes.INFO:
-                console.info(message);
-                break;
-            case LogEventBaseTypes.WARNING:
-                console.warn(message);
-                break;
-            case LogEventBaseTypes.ERROR:
-            default:
-                console.error(message);
-                break;
-        }
-    } catch (e) {
-        console.error(e as Error);
+  try {
+    if (!message) {
+      console.warn("No message passed to writeStringToConsole method");
+      return;
     }
+
+    switch (eventType) {
+      case LogEventBaseTypes.DEBUG:
+        console.debug(message);
+        break;
+      case LogEventBaseTypes.INFO:
+        console.info(message);
+        break;
+      case LogEventBaseTypes.WARNING:
+        console.warn(message);
+        break;
+      case LogEventBaseTypes.ERROR:
+      default:
+        console.error(message);
+        break;
+    }
+  } catch (e) {
+    console.error(e as Error);
+  }
 };

@@ -9,15 +9,15 @@ import { writeStringToConsole } from "src/utils/writeStringToConsole";
  * @param eventType  Override the event type set on the param object
  */
 export const writeLogEventToConsole = (
-    logEvent: LogEvent,
-    eventType?: string
+  logEvent: LogEvent,
+  eventType?: string
 ) => {
-    try {
-        writeStringToConsole(
-            logEvent.formatted ? logEvent.formatted : logEvent.message,
-            eventType ? eventType : (logEvent as LogEvent)?.eventType
-        );
-    } catch (e) {
-        console.error(e as Error);
-    }
+  try {
+    writeStringToConsole(
+      logEvent.formatted ? logEvent.formatted : logEvent.message,
+      eventType ? eventType : (logEvent as LogEvent)?.eventType
+    );
+  } catch (e) {
+    console.error(e as Error);
+  }
 };
