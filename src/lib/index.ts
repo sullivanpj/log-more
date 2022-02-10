@@ -1,5 +1,3 @@
-/** @format */
-
 export * from "./formatLogMessage";
 export * from "./formatTemplateToken";
 export * from "./isResult";

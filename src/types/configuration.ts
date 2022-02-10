@@ -1,10 +1,11 @@
-/** @format */
-
 import { WriteLogEventFunction } from "./log";
 import { ResultValidationType } from "./result";
 import { Locale } from "date-fns";
 
-export type CustomEventTypeDetails = {
+/**
+ * Configuration parameters to be applied to a specific event type
+ */
+export type EventTypeDetails = {
   /**
    * The function to be called when logging the event
    */
@@ -26,6 +27,9 @@ export type CustomEventTypeDetails = {
   formatTemplate?: string;
 };
 
+/**
+ * Specifications for the various configuration parameters Log-More accepts
+ */
 export type Configuration = {
   /**
    * The default function that will be used to write the events to the logs. Can be overridden by the user to apply custom logging. The default functionality will try to write to the console.
@@ -35,7 +39,7 @@ export type Configuration = {
   /**
    * A look-up dictionary that uses Custom user defined Log Event Type strings as keys and an object with details about that event as the value
    */
-  eventTypeRegistry: Record<string, CustomEventTypeDetails>;
+  eventTypeRegistry: Record<string, EventTypeDetails>;
 
   /**
    * A prefix string to prepend to the start of all log messages

@@ -161,7 +161,7 @@
   },
   "kind": "Package",
   "canonicalReference": "log-more!",
-  "docComment": "",
+  "docComment": "/**\n * A light-weight javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.\n *\n * @remarks\n *\n * The `log-more` package includes various different utility methods, the `Result` class (for managing the results of functions/processes), and a ConfigurationManager static class to control the user's current settings.\n *\n * @packageDocumentation\n */\n",
   "name": "log-more",
   "members": [
     {
@@ -172,7 +172,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!Configuration:type",
-          "docComment": "",
+          "docComment": "/**\n * Specifications for the various configuration parameters Log-More accepts\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -202,8 +202,8 @@
             },
             {
               "kind": "Reference",
-              "text": "CustomEventTypeDetails",
-              "canonicalReference": "log-more!CustomEventTypeDetails:type"
+              "text": "EventTypeDetails",
+              "canonicalReference": "log-more!EventTypeDetails:type"
             },
             {
               "kind": "Content",
@@ -220,7 +220,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Locale_2",
+              "text": "Locale",
               "canonicalReference": "!\"\\\"date-fns\\\"\".Locale:type"
             },
             {
@@ -263,7 +263,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Configuration_2",
+                  "text": "Configuration",
                   "canonicalReference": "log-more!Configuration:type"
                 },
                 {
@@ -272,7 +272,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "IIndexable_2",
+                  "text": "IIndexable",
                   "canonicalReference": "log-more!IIndexable:interface"
                 },
                 {
@@ -355,8 +355,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "CustomEventTypeDetails_2",
-                  "canonicalReference": "log-more!CustomEventTypeDetails:type"
+                  "text": "EventTypeDetails",
+                  "canonicalReference": "log-more!EventTypeDetails:type"
                 },
                 {
                   "kind": "Content",
@@ -402,7 +402,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Configuration_2",
+                  "text": "Configuration",
                   "canonicalReference": "log-more!Configuration:type"
                 },
                 {
@@ -415,7 +415,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Result_2",
+                  "text": "Result",
                   "canonicalReference": "log-more!Result:class"
                 },
                 {
@@ -469,7 +469,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Result_2",
+                  "text": "Result",
                   "canonicalReference": "log-more!Result:class"
                 },
                 {
@@ -508,12 +508,12 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "log-more!CustomEventTypeDetails:type",
-          "docComment": "",
+          "canonicalReference": "log-more!EventTypeDetails:type",
+          "docComment": "/**\n * Configuration parameters to be applied to a specific event type\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type CustomEventTypeDetails = "
+              "text": "export declare type EventTypeDetails = "
             },
             {
               "kind": "Content",
@@ -543,7 +543,7 @@
             }
           ],
           "releaseTag": "Public",
-          "name": "CustomEventTypeDetails",
+          "name": "EventTypeDetails",
           "typeTokenRange": {
             "startIndex": 1,
             "endIndex": 6
@@ -564,7 +564,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogEvent_2",
+              "text": "LogEvent",
               "canonicalReference": "log-more!LogEvent:type"
             },
             {
@@ -573,7 +573,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             },
             {
@@ -603,7 +603,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             },
             {
@@ -621,11 +621,11 @@
         {
           "kind": "Interface",
           "canonicalReference": "log-more!IIndexable:interface",
-          "docComment": "/**\n * @format\n */\n",
+          "docComment": "/**\n * A default dictionary type that can be indexed via a string\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare interface IIndexable "
+              "text": "export interface IIndexable "
             }
           ],
           "releaseTag": "Public",
@@ -700,7 +700,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             },
             {
@@ -718,11 +718,11 @@
         {
           "kind": "Interface",
           "canonicalReference": "log-more!ITypedIndexable:interface",
-          "docComment": "",
+          "docComment": "/**\n * A default dictionary type that can be indexed via a string and containing specific values\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare interface ITypedIndexable<T> "
+              "text": "export interface ITypedIndexable<T> "
             }
           ],
           "releaseTag": "Public",
@@ -789,7 +789,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!LogEvent:type",
-          "docComment": "",
+          "docComment": "/**\n * Data used to identify and log a specific system event\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -828,7 +828,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!LogWriteParams:type",
-          "docComment": "",
+          "docComment": "/**\n * Parameters that can be passed into the `write` utility functions\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -918,7 +918,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "ResultParams_2",
+                  "text": "ResultParams",
                   "canonicalReference": "log-more!ResultParams:type"
                 },
                 {
@@ -967,7 +967,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "ResultParams_2",
+                  "text": "ResultParams",
                   "canonicalReference": "log-more!ResultParams:type"
                 },
                 {
@@ -1439,7 +1439,7 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "ResultValidationType_2",
+                  "text": "ResultValidationType",
                   "canonicalReference": "log-more!ResultValidationType:type"
                 },
                 {
@@ -1569,7 +1569,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!ResultParams:type",
-          "docComment": "",
+          "docComment": "/**\n * Parameters that can be passed into the Result class's constructor to initialize an object\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1624,7 +1624,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!ResultValidationType:type",
-          "docComment": "/**\n * @format\n */\n",
+          "docComment": "/**\n * The potential values of the Validation Type field\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1661,7 +1661,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             },
             {
@@ -1670,7 +1670,7 @@
             },
             {
               "kind": "Reference",
-              "text": "ResultValidationType_2",
+              "text": "ResultValidationType",
               "canonicalReference": "log-more!ResultValidationType:type"
             },
             {
@@ -1700,7 +1700,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1709,7 +1709,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],
@@ -1735,7 +1735,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1744,7 +1744,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],
@@ -1770,7 +1770,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1779,7 +1779,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],
@@ -1805,7 +1805,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1814,7 +1814,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],
@@ -1840,7 +1840,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogEvent_2",
+              "text": "LogEvent",
               "canonicalReference": "log-more!LogEvent:type"
             },
             {
@@ -1849,7 +1849,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],
@@ -1863,7 +1863,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "log-more!WriteLogEventFunction:type",
-          "docComment": "",
+          "docComment": "/**\n * The function definition for any implementations of WriteLogEvent. Custom user-defined methods should be sure to align with this.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1909,7 +1909,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1939,7 +1939,7 @@
             },
             {
               "kind": "Reference",
-              "text": "LogWriteParams_2",
+              "text": "LogWriteParams",
               "canonicalReference": "log-more!LogWriteParams:type"
             },
             {
@@ -1948,7 +1948,7 @@
             },
             {
               "kind": "Reference",
-              "text": "Result_2",
+              "text": "Result",
               "canonicalReference": "log-more!Result:class"
             }
           ],

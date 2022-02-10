@@ -3,10 +3,23 @@
     "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
+    "isolatedModules": true,
+    "lib": ["ES2021.String"],
     "strict": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
-    "lib": ["ES2021.String"]
+    "paths": {
+      "log-more": ["./src/index.ts"]
+    }
   }
 }

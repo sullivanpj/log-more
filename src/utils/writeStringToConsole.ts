@@ -1,11 +1,9 @@
-/** @format */
-
-import { LogEventBaseTypes } from "src/constants/log-event-base-types";
+import { LogEventBaseTypes } from "../constants/log-event-base-types";
 
 /**
  * A method to write a string directly to the console (ignoring the writeLogEvent method specified in the configuration)
- * @param message The string to write to the logs
- * @param eventType  Override the event type set on the param object
+ * @param message - The string to write to the logs
+ * @param eventType - Override the event type set on the param object
  */
 export const writeStringToConsole = (
   message?: string,

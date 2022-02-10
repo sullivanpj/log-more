@@ -1,8 +1,6 @@
-/** @format */
-
-import { FormatTemplateFields } from "src/constants/format-template-fields";
-import { Result } from "src/result";
-import { formatTemplateToken } from "src/lib/formatTemplateToken";
+import { FormatTemplateFields } from "../constants/format-template-fields";
+import { Result } from "../result";
+import { formatTemplateToken } from "../lib/formatTemplateToken";
 
 /**
  * Get the default format log template string
