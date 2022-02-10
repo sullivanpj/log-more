@@ -4,12 +4,13 @@
 
 📓Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.
 
-[![NPM Version](https://img.shields.io/npm/v/react-final-form.svg?style=for-the-badge&logo=appveyor)](https://www.npmjs.com/package/log-more)
-[![Build Status](https://img.shields.io/github/license/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
-[![Build Status](https://img.shields.io/github/issues/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/sullivanpj/log-more?style=for-the-badge)](https://github.com/sullivanpj/log-more)
-[![GitHub last commit](https://img.shields.io/github/last-commit/sullivanpj/log-more?style=for-the-badge&logo=appveyor)](https://github.com/sullivanpj/log-more)
+[![NPM Version](https://img.shields.io/npm/v/react-final-form.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/log-more)
+[![License](https://img.shields.io/github/license/sullivanpj/log-more?style=for-the-badge&logo=opensourceinitiative)](https://github.com/sullivanpj/log-more)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge&logo=prettier)](https://github.com/sullivanpj/log-more)
+[![Build Status](https://img.shields.io/github/issues/sullivanpj/log-more?style=for-the-badge&logo=openbugbounty)](https://github.com/sullivanpj/log-more)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/sullivanpj/log-more?style=for-the-badge&logo=git)](https://github.com/sullivanpj/log-more)
+[![GitHub last commit](https://img.shields.io/github/last-commit/sullivanpj/log-more?style=for-the-badge&logo=github)](https://github.com/sullivanpj/log-more)
+[![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg?style=for-the-badge)](https://liberamanifesto.com)
 
 # Features
 
@@ -68,7 +69,7 @@ ConfigurationManager.setConfig({
 
 The full list of configuration parameters can be found in our [documentation](https://sullivanpj.github.io/log-more/modules.html#Configuration).
 
-# 📓Logging📓
+# 📓 Logging 📓
 
 Log-More provides the user with "write" logging utility methods that will use the [configuration](https://sullivanpj.github.io/log-more/modules.html#Configuration) parameters previously provided by the user to write logs.
 
@@ -100,7 +101,7 @@ More information on the "write" logging utility methods shown above can be found
 
 The [Result](https://sullivanpj.github.io/log-more/classes/Result.html) class provided by Log-More can be used in any function or process to indicate success, failure, or something in between.
 
-For quick usage, the Result class includes some static methods that can be used to generate a new Result object with the specified `validationType`.
+For quick usage, the [Result](https://sullivanpj.github.io/log-more/classes/Result.html) class includes some static methods that can be used to generate a new Result object with the specified `validationType`.
 
 ```ts
 import { Result, validate, write } from "log-more";
@@ -157,7 +158,7 @@ write(failure);
 
 ## Custom User Defined Events
 
-📓Log-More allows users to specify custom event types, handlers, and logging.
+Log-More allows users to specify custom event types, handlers, and logging.
 
 When providing a configuration object to the [ConfigurationManager](https://sullivanpj.github.io/log-more/classes/ConfigurationManager.html), user's can specify the [eventTypeRegistry](https://sullivanpj.github.io/log-more/modules.html#Configuration) parameter. This parameter allows users to [register](https://sullivanpj.github.io/log-more/modules.html#CustomEventTypeDetails) custom event types with Log-More that can be handled at a later time.
 
@@ -217,19 +218,19 @@ Log-More allows users to define their own custom templates to be used in [format
 
 The format templates are made up of template fields that are passed into the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) function to generate template field tokens. Creating the template field tokens in the [formatTemplateToken](https://sullivanpj.github.io/log-more/modules.html#formatTemplateToken) function is a very straight forward process - essentially just pre-pending the templateTokenStart and appending the templateTokenStop strings from the [Configuration](https://sullivanpj.github.io/log-more/modules.html#Configuration) data around the field name. The below list of fields are available to include in a formatting template:
 
-|    **Field Name**     | **Template Field**   |
-| :-------------------: | :-----------------:  |
-|      Event Type       |     EVENT_TYPE       |
-|    Validation Type    |  VALIDATION_TYPE     |
-|       Event ID        |         ID           |
-|      Event Name       |        NAME          |
-|     Event Source      |       SOURCE         |
-|        Context        |      CONTEXT         |
-|     Event Message     |      MESSAGE         |
-| Event Message Details |      DETAILS         |
-|      Stack Trace      |       STACK          |
-|        User ID        |      USER_ID         |
-| Timestamp (formatted) |     TIME_STAMP       |
+|    **Field Name**     | **Template Field** |
+| :-------------------: | :----------------: |
+|      Event Type       |     EVENT_TYPE     |
+|    Validation Type    |  VALIDATION_TYPE   |
+|       Event ID        |         ID         |
+|      Event Name       |        NAME        |
+|     Event Source      |       SOURCE       |
+|        Context        |      CONTEXT       |
+|     Event Message     |      MESSAGE       |
+| Event Message Details |      DETAILS       |
+|      Stack Trace      |       STACK        |
+|        User ID        |      USER_ID       |
+| Timestamp (formatted) |     TIME_STAMP     |
 
 ```ts
 import { formatTemplateToken } from "log-more";
@@ -262,7 +263,7 @@ ${detailsTemplateToken}
 ** A custom event log footer **
 `);
 if (result.isSuccessful) {
-  // Template was successfully saved to configuration 
+  // Template was successfully saved to configuration
 }
 
   .

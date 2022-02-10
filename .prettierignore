@@ -1,0 +1,19 @@
+# Ignore artifacts:
+.husky/
+build/
+coverage/
+dist/
+docs/
+node_modules/
+reports/
+temp/
+.browserslistrc
+.editorconfig
+.eslintcache
+LICENSE
+.eslintignore
+.gitignore
+.prettierignore
+
+# Ignore all HTML files:
+*.html
