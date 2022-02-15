@@ -1,0 +1,24 @@
+{
+  "extends": "@nrwl/workspace/presets/core.json",
+  "npmScope": "log-more",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "NDI2YjQyMTQtYWQzMC00OGI1LWFlMDItNzg4ODQ5NGM5OGUzfHJlYWQtd3JpdGU="
+      }
+    }
+  }
+}

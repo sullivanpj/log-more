@@ -1,0 +1,115 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 5rem 0 9rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  --ifm-hero-background-color: #1e2a4a !important;
+}
+
+.heroBanner .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+}
+
+.heroBanner h1 {
+  font-size: 7rem;
+}
+
+.heroSubtitle {
+  color: var(--ifm-color-emphasis-0, #ed1a92);
+}
+
+.heroBannerCol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  max-width: fit-content !important;
+  width: fit-content !important;
+  --ifm-col-width: fit-content !important;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .heroBanner .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.verticalAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontalAlign,
+.sectionTitle {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftAlign {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.sectionTitle h3 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  border-bottom: 3px solid var(--ifm-color-emphasis-0, #ed1a92);
+  line-height: 1.4;
+  font-size: 2.5rem;
+  white-space: pre;
+  font-family: "OpenSans-Semibold", system-ui, -apple-system, sans-serif;
+  /*color: var(--ifm-color-primary, #ed1a92);*/
+}
+
+.sectionLight {
+  background-color: var(--lm-landing-bg-color-light, #081229);
+}
+
+.sectionDark {
+  background-color: var(--ifm-background-color, #131822);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+.iconLink {
+  color: var(--ifm-color-secondary, #fff);
+}

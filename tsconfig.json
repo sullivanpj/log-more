@@ -1,25 +1,14 @@
 {
+  "files": [],
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "lib": ["ES2021.String"],
-    "strict": true,
-    "esModuleInterop": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
-    "noUncheckedIndexedAccess": true,
-    "baseUrl": ".",
-    "paths": {
-      "log-more": ["./src/index.ts"]
+    "disableSourceOfProjectReferenceRedirect": true
+  },
+  "references": [
+    {
+      "path": "./packages/base"
+    },
+    {
+      "path": "./packages/core"
     }
-  }
+  ]
 }
