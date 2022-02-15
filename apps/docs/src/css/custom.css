@@ -1,0 +1,442 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../../static/font/OpenSans-Light.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  src: url("../../static/font/OpenSans-Semibold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../../static/font/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+}
+
+:root {
+  --ifm-font-family-base: "OpenSans-Light", system-ui, -apple-system, sans-serif;
+
+  --ifm-font-family-monospace: "OpenSans-Light", system-ui, -apple-system,
+    sans-serif;
+
+  --ifm-background-color: #c21a79;
+
+  --ifm-color-primary: #131822;
+  --ifm-color-primary: #131822;
+  --ifm-color-primary-dark: #11161f;
+  --ifm-color-primary-darker: #10141d;
+  --ifm-color-primary-darkest: #0d1118;
+  --ifm-color-primary-light: #151a25;
+  --ifm-color-primary-lighter: #161c27;
+  --ifm-color-primary-lightest: #191f2c;
+
+  --ifm-color-secondary: #fff;
+  --ifm-color-emphasis-0: #fff;
+  --ifm-hover-overlay: #fff;
+  --collapse-button-bg-color-dark: #ed1a92;
+  --ifm-color-secondary-darkest: #ed1a92;
+  --ifm-color-secondary-lighter: #ed1a92;
+
+  --ifm-link-color: #ed1a92;
+  --ifm-color-content: #fff;
+  --ifm-color-content-inverse: #ed1a92;
+  --ifm-color-content-secondary: #ed1a92;
+
+  --ifm-tabs-color-active: #ed1a92;
+
+  --ifm-font-color-base: #fff;
+  --ifm-font-color-base-inverse: #fff;
+  --ifm-font-color-secondary: #ed1a92;
+
+  --ifm-toc-border-color: #ed1a92;
+  --ifm-toc-link-color: #ed1a92;
+
+  --lm-landing-bg-color-light: #081229;
+}
+
+/* Overriding root Infima variables */
+html[data-theme="dark"] {
+  --ifm-font-family-base: "OpenSans-Light", system-ui, -apple-system, sans-serif;
+
+  --ifm-font-family-monospace: "OpenSans-Light", system-ui, -apple-system,
+    sans-serif;
+
+  --ifm-background-color: #131822;
+  --ifm-navbar-background-color: #293d68;
+
+  --ifm-color-primary: #c21a79;
+  --ifm-color-primary-dark: #94185e;
+  --ifm-color-primary-darker: #521537;
+  --ifm-color-primary-darkest: #4e0b31;
+  --ifm-color-primary-light: #d63c94;
+  --ifm-color-primary-lighter: #df1e8b;
+  --ifm-color-primary-lightest: #e5399a;
+
+  --ifm-color-secondary: #fff;
+  --ifm-color-emphasis-0: #ed1a92;
+  --ifm-hover-overlay: #fff;
+  --collapse-button-bg-color-dark: #ed1a92;
+  --ifm-color-secondary-darkest: #ed1a92;
+  --ifm-color-secondary-lighter: #ed1a92;
+
+  --ifm-link-color: #ed1a92;
+  --ifm-color-content: #fff;
+  --ifm-color-content-inverse: #ed1a92;
+  --ifm-color-content-secondary: #ed1a92;
+
+  --ifm-tabs-color-active: #ed1a92;
+
+  --ifm-font-color-base: #fff;
+  --ifm-font-color-base-inverse: #fff;
+  --ifm-font-color-secondary: #ed1a92;
+
+  --ifm-toc-border-color: #ed1a92;
+  --ifm-toc-link-color: #ed1a92;
+
+  --lm-landing-bg-color-light: #131822;
+}
+
+.navbar__link--active,
+.navbar__link:active,
+.a:active {
+  font-family: "OpenSans-ExtraBold", system-ui, -apple-system, sans-serif !important;
+  font-weight: bolder;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 2px solid var(--ifm-color-emphasis-0, #ed1a92) !important;
+}
+
+.table-of-contents__left-border {
+  border-left: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
+}
+
+/*.docItemCol_node_modules-@docusaurus-theme-classic-lib-next-theme-DocItem-styles-module {
+
+}*/
+
+.menu__link {
+  font-family: "OpenSans-Semibold", system-ui, -apple-system, sans-serif !important;
+  font-weight: bolder;
+}
+
+.menu__link--active,
+.menu__link--active:not(.menu__link--sublist),
+.menu__link:hover,
+.menu__caret:hover,
+.menu__list-item-collapsible:hover {
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: transparent;
+}
+
+.menu__link,
+.menu__caret {
+  border-radius: 0px;
+}
+
+.menu__link,
+.menu__caret {
+  width: fit-content;
+  padding: 0px;
+  padding-top: var(--ifm-menu-link-padding-vertical);
+  line-height: 1.5;
+  margin: var(--ifm-menu-link-padding-vertical)
+    var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__link:hover,
+.menu__caret:hover {
+  border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
+}
+
+.markdown > h2 {
+  max-width: fit-content;
+  border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
+  line-height: 1.4;
+}
+
+.navbar__link--hover,
+.navbar__link:hover,
+.a:hover,
+.a--hover {
+  border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
+  line-height: 1.3;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(91, 72, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*
+==============================================
+floating
+==============================================
+*/
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/*
+==============================================
+tossing
+==============================================
+*/
+
+.tossing {
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+  }
+}
+
+/*
+==============================================
+slideUp
+==============================================
+*/
+
+.slideUp {
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-8%);
+  }
+  65% {
+    transform: translateY(4%);
+  }
+  80% {
+    transform: translateY(-4%);
+  }
+  95% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+  50% {
+    -webkit-transform: translateY(-8%);
+  }
+  65% {
+    -webkit-transform: translateY(4%);
+  }
+  80% {
+    -webkit-transform: translateY(-4%);
+  }
+  95% {
+    -webkit-transform: translateY(2%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/*
+==============================================
+slideLeft
+==============================================
+*/
+
+.slideLeft {
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(150%);
+  }
+  50% {
+    transform: translateX(-8%);
+  }
+  65% {
+    transform: translateX(4%);
+  }
+  80% {
+    transform: translateX(-4%);
+  }
+  95% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translateX(-8%);
+  }
+  65% {
+    -webkit-transform: translateX(4%);
+  }
+  80% {
+    -webkit-transform: translateX(-4%);
+  }
+  95% {
+    -webkit-transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}

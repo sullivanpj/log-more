@@ -1,0 +1,73 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.verticalAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontalAlign {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftAlign {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.fitContent {
+  width: fit-content !important;
+  max-width: fit-content !important;
+}
+
+.iconLink {
+  color: var(--ifm-color-secondary, #fff);
+}
+
+.iconLink:hover {
+  color: var(--ifm-color-primary, #ed1a92);
+
+  animation-name: hovering;
+  -webkit-animation-name: hovering;
+
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes hovering {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(12%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes hovering {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(12%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+.fingerPrint {
+  font-weight: bolder;
+}

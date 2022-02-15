@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "document": {
+      "implementation": "./impl",
+      "schema": "./schema.json",
+      "description": "Generates API documentation, formats documentations, and adds pages to Docusaurus site."
+    }
+  }
+}

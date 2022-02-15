@@ -11,6 +11,7 @@
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sullivanpj/log-more?style=for-the-badge&logo=git)](https://github.com/sullivanpj/log-more)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sullivanpj/log-more?style=for-the-badge&logo=github)](https://github.com/sullivanpj/log-more)
 [![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg?style=for-the-badge)](https://liberamanifesto.com)
+[![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 # Features
 

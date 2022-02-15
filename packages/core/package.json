@@ -1,0 +1,8 @@
+{
+  "name": "log-more",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "scripts": {
+    "docs": "node build/make-docs.js"
+  }
+}

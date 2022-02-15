@@ -1,19 +1,5 @@
-# Ignore artifacts:
-.husky/
-build/
-coverage/
-dist/
-docs/
-node_modules/
-reports/
-temp/
-.browserslistrc
-.editorconfig
-.eslintcache
-LICENSE
-.eslintignore
-.gitignore
-.prettierignore
+# Add files here to ignore them from prettier formatting
 
-# Ignore all HTML files:
-*.html
+/dist
+/coverage
+.docusaurus/
