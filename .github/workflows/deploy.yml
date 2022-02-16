@@ -19,7 +19,7 @@ jobs:
         working-directory: apps/docs
         run: |
           npm ci
-          nx @nx-plus/docusaurus:browser
+          npx nx run docs:build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
