@@ -5,44 +5,38 @@
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/base",
         "main": "packages/base/src/index.ts",
         "tsConfig": "packages/base/tsconfig.lib.json",
-        "assets": [
-          "packages/base/*.md"
-        ]
+        "assets": ["packages/base/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/base/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/base/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/base"
-      ],
+      "outputs": ["coverage/packages/base"],
       "options": {
         "jestConfig": "packages/base/jest.config.js",
         "passWithNoTests": true
       }
     },
     "document": {
-      "executor": "./tools/executors/document:document"  
+      "executor": "./tools/executors/document:document"
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
-  "tags": [
-    "scope:base"
-  ]
+  "tags": ["scope:base"]
 }
