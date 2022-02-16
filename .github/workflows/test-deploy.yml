@@ -19,4 +19,4 @@ jobs:
         working-directory: apps/docs
         run: |
           npm ci
-          nx @nx-plus/docusaurus:browser
+          npx nx run docs:build
