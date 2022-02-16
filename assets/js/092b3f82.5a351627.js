@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklog_more=globalThis.webpackChunklog_more||[]).push([[2204],{3852:l=>{l.exports=JSON.parse('{"permalink":"/log-more/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
