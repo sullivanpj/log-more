@@ -1,6 +1,6 @@
 <!-- @format -->
 
-![log-right Logo](https://sullivanpj.com/images/log-right-banner.png)
+![log-right Logo](https://sullivanpj.com/images/log-more-banner.png)
 
 📓Log-Right is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.
 
