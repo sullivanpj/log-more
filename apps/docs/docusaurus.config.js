@@ -1,14 +1,15 @@
 module.exports = {
   title: "Log-More",
   tagline: "Making the world a better place... one log at a time",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://sullivanpj.github.io",
+  baseUrl: "/log-more/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "SullivanPJ",
   projectName: "log-more",
   titleDelimiter: "📓",
+  trailingSlash: false,
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr"],
