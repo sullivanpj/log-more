@@ -21,4 +21,6 @@ $ npm i log-more --save
 $ yarn add -D log-more
 ```
 
-If the above command was executed successfully, the package should be installed correctly. Congrats!
+If the above command was executed successfully, the package should be installed correctly. **Congrats!** You are now ready to [get started](getting-started.md) using log-more.
+
+
