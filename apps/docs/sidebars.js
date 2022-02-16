@@ -7,6 +7,7 @@ module.exports = {
       "learning/introduction",
       "learning/installation",
       "learning/getting-started",
+      "learning/result-handler",
     ],
   },
 };
