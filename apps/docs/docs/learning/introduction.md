@@ -9,16 +9,12 @@ tags:
 
 # Introduction
 
-The purpose of this document is to outline the installation process for the `log-more` package.
+Log-More is a downloadable package that provides various utilities for detecting, reporting, and handling errors in a JavaScript/TypeScript application. 
 
-## Installing the Log-More Package
+Developers can [download and install](installation.md) log-more using their preferred package manager.
 
-Open a command prompt inside of your current project's directory and run the below command:
 
-```bash
-$ npm i log-more --save
-# or
-$ yarn add -D log-more
-```
 
-If the above command was executed successfully, the package should be installed correctly. Congrats!
+
+
+

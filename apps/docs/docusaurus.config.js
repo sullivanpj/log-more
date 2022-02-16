@@ -112,6 +112,10 @@ module.exports = {
               label: "Base",
               to: "docs/base/",
             },
+            {
+              label: "License",
+              to: "https://mit-license.org/",
+            },
           ],
         },
         {
@@ -122,12 +126,12 @@ module.exports = {
               to: "docs/learning/introduction/",
             },
             {
-              label: "Getting Started",
-              to: "docs/learning/getting-started/",
-            },
-            {
               label: "Installation",
               to: "docs/learning/installation/",
+            },
+            {
+              label: "Getting Started",
+              to: "docs/learning/getting-started/",
             },
           ],
         },
@@ -175,7 +179,7 @@ module.exports = {
         src: "img/logo-footer.png",
         href: "https://github.com/sullivanpj/log-more",
       },
-      copyright: `Copyright © ${new Date().getFullYear()} 📓Log-More. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 📓Log-More`,
     },
   },
   themes: ["@docusaurus/theme-live-codeblock"],
@@ -185,7 +189,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/sullivanpj/log-more",
+          editUrl: "https://github.com/sullivanpj/log-more/tree/main/apps/docs",
         },
         blog: {
           showReadingTime: true,

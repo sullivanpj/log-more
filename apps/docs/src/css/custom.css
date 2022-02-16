@@ -34,7 +34,6 @@
   --ifm-background-color: #c21a79;
 
   --ifm-color-primary: #131822;
-  --ifm-color-primary: #131822;
   --ifm-color-primary-dark: #11161f;
   --ifm-color-primary-darker: #10141d;
   --ifm-color-primary-darkest: #0d1118;
@@ -161,10 +160,18 @@ html[data-theme="dark"] {
   border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
 }
 
+.markdown > h1,
 .markdown > h2 {
   max-width: fit-content;
-  border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
   line-height: 1.4;
+}
+
+.markdown > h1 {
+  border-bottom: 3px solid var(--ifm-color-emphasis-0, #ed1a92);
+}
+
+.markdown > h2 {
+  border-bottom: 2px solid var(--ifm-color-emphasis-0, #ed1a92);
 }
 
 .navbar__link--hover,

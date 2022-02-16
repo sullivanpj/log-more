@@ -142,10 +142,10 @@ function Home() {
                   <>
                     Logging in JavaScript/TypeScript can unfortunately tend to
                     be much more difficult than just writing a string to the
-                    log. Log-More has plenty of built in functionality to
+                    console. Log-More has plenty of built in functionality to
                     support various methods of capturing this data to the source
-                    of your choice - but if you just want to write the methods
-                    to the log, Log-More has you covered there too!
+                    of your choice - but if you just want to write a string to
+                    the console, Log-More has you covered there too!
                   </>
                 }
                 Icon={ImNewspaper}
@@ -407,6 +407,61 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
         </section>
 
         <section className={styles.sectionLight}>
+          <div
+            className={clsx(
+              "container padding-bottom--lg",
+              styles.horizontalAlign,
+              styles.section
+            )}>
+            <div className="col">
+              <div
+                className={clsx(
+                  "row",
+
+                  styles.sectionTitle
+                )}>
+                <h3>Are you ready to get started with Log-More?</h3>
+              </div>
+
+              <div className={clsx("row", styles.horizontalAlign)}>
+                <Link
+                  className={clsx(
+                    "button button--secondary button--outline  button--lg padding--md margin-vert--lg margin-right--sm margin-left--sm",
+                    styles.getStarted
+                  )}
+                  to={useBaseUrl("docs/learning/introduction")}>
+                  Learn More
+                </Link>
+                <Link
+                  className={clsx(
+                    "button button--secondary button--outline button--lg padding--md margin-vert--lg margin-right--sm margin-left--sm",
+                    styles.getStarted
+                  )}
+                  to={useBaseUrl("docs/log-more")}>
+                  View Documentation
+                </Link>
+                <Link
+                  className={clsx(
+                    "button button--secondary button--outline button--lg padding--md margin-vert--lg margin-right--sm margin-left--sm",
+                    styles.getStarted
+                  )}
+                  to={useBaseUrl("docs/learning/installation")}>
+                  Installation
+                </Link>
+                <Link
+                  className={clsx(
+                    "button button--secondary button--outline button--lg padding--md margin-vert--lg margin-right--sm margin-left--sm",
+                    styles.getStarted
+                  )}
+                  to={useBaseUrl("docs/learning/getting-started")}>
+                  Getting Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.sectionDark}>
           <div
             className={clsx(
               "container padding-vert--lg",

@@ -5,8 +5,8 @@ module.exports = {
   learningSidebar: {
     Learning: [
       "learning/introduction",
-      "learning/getting-started",
       "learning/installation",
+      "learning/getting-started",
     ],
   },
 };
