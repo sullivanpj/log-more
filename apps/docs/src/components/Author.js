@@ -52,7 +52,7 @@ export const Author = () => {
         <a
           className={clsx("margin-left--md", styles.iconLink)}
           href={`mailto:patrick.joseph.sullivan@protonmail.com?subject=${encodeURIComponent(
-            "I want to talk about Log-More!"
+            "I want to talk about Log-Right!"
           )}`}>
           <ImMail4 size="3em" />
         </a>

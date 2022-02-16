@@ -1,4 +1,4 @@
-import { DefaultEventTypes, Severity, SeverityTypes } from "@log-more/base";
+import { DefaultEventTypes, Severity, SeverityTypes } from "@log-right/base";
 import { ConfigurationManager } from "./ConfigurationManager";
 import { Result } from "./Result";
 

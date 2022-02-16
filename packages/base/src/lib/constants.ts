@@ -2,7 +2,7 @@ import { captureToConsole } from "./captureToConsole";
 import { formatBase } from "./formatBase";
 import {
   LogEventConfigBase,
-  LogMoreConfigBase,
+  LogRightConfigBase,
   TypedIndexable,
   UserConfig,
 } from "./types";
@@ -32,12 +32,12 @@ export const DefaultUserConfigBase: UserConfig = {
   /**
    * A string that can be used to represent the current user performing actions in the application/triggering processes
    */
-  userId: "Log.More",
+  userId: "Log.Right",
 
   /**
    * The user's first name
    */
-  firstName: "Log-More",
+  firstName: "Log-Right",
 
   /**
    * The user's last name
@@ -98,7 +98,7 @@ export const DefaultLogEventConfigBase: TypedIndexable<
   },
 } as const;
 
-export const DefaultLogMoreConfigBase: LogMoreConfigBase = {
+export const DefaultLogRightConfigBase: LogRightConfigBase = {
   format: formatBase,
   capture: captureToConsole,
   logEventRegistry: {

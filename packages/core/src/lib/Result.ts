@@ -11,7 +11,7 @@ import {
   Severity,
   SeverityTypes,
   ConfigurationManagerBase,
-} from "@log-more/base";
+} from "@log-right/base";
 import { nanoid } from "nanoid/non-secure";
 import { isResult } from "./isResult";
 import { validate } from "./validate";

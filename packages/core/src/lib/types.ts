@@ -4,12 +4,12 @@ import {
   FormatFunctionBase,
   FormattedData,
   LogEventConfigBase,
-  LogMoreConfigBase,
+  LogRightConfigBase,
   Report,
   ReportConfigBase,
   ResultConfigBase,
   UserConfig,
-} from "@log-more/base";
+} from "@log-right/base";
 import { Result } from "./Result";
 
 /**
@@ -76,9 +76,9 @@ export type LogEventConfig<
 > = LogEventConfigBase<TResultConfig, TReportConfig>;
 
 /**
- * Specifications for the base level of configuration parameters Log-More accepts
+ * Specifications for the base level of configuration parameters log-right accepts
  */
-export type LogMoreConfig<
+export type LogRightConfig<
   TLogEventConfig extends LogEventConfig = LogEventConfig,
   TUserConfig extends UserConfig = UserConfig
-> = LogMoreConfigBase<TLogEventConfig, TUserConfig>;
+> = LogRightConfigBase<TLogEventConfig, TUserConfig>;

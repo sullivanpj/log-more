@@ -1,4 +1,4 @@
-import { FormattedData, Report } from "@log-more/base";
+import { FormattedData, Report } from "@log-right/base";
 import { Result } from "./Result";
 
 /**

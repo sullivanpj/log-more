@@ -1,10 +1,10 @@
 {
-  "name": "log-more",
+  "name": "log-right",
   "author": "Patrick Sullivan <patrick.joseph.sullivan@protonmail.com> (https://github.com/sullivanpj)",
-  "repository":"https://github.com/sullivanpj/log-more",
+  "repository":"https://github.com/sullivanpj/log-right",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "📓 Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.",
+  "description": "📓 log-right is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.",
   "scripts": {},
   "private": true,
   "dependencies": {

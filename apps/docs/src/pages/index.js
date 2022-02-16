@@ -44,7 +44,7 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.tagline}`}
-      description="Log-More - typescript logging API">
+      description="Log-Right - typescript logging API">
       <header className={clsx("hero hero--primary ", styles.heroBanner)}>
         <div className="container">
           <div className="row">
@@ -74,7 +74,7 @@ function Home() {
                           "button button--primary button--lg padding--md margin-vert--lg",
                           styles.getStarted
                         )}
-                        to={useBaseUrl("docs/log-more/")}>
+                        to={useBaseUrl("docs/log-right/")}>
                         Get Started
                       </Link>
                     </div>
@@ -84,7 +84,7 @@ function Home() {
                           "button button--outline button--secondary button--lg padding--md margin-vert--lg",
                           styles.getStarted
                         )}
-                        to="https://github.com/sullivanpj/log-more">
+                        to="https://github.com/sullivanpj/log-right">
                         View in GitHub
                       </Link>
                     </div>
@@ -111,13 +111,13 @@ function Home() {
                 title="Error Handling"
                 description={
                   <>
-                    Log-More's `Result` class provides a standard way to handle
+                    Log-Right's `Result` class provides a standard way to handle
                     returning errors (or any other value) from a function or
                     external process. By using the Result object as your go-to
                     method of returning from a function, you are organizing all
                     of your code's function types, keeping to a consistent and
                     predicable error handling principle, and enabling your code
-                    to use the rest of the Log-More event handling flow.
+                    to use the rest of the Log-Right event handling flow.
                   </>
                 }
                 Icon={MdOutlineError}
@@ -126,10 +126,10 @@ function Home() {
                 title="Formatting"
                 description={
                   <>
-                    Log-More will first format Result objects using a method
+                    Log-Right will first format Result objects using a method
                     provided by the user (or the default methods if not
                     provided), so that the data is in a form that can be
-                    captured to the logs. Log-More also has various build-in
+                    captured to the logs. Log-Right also has various build-in
                     methods of formatting this data that the user can select
                     from.
                   </>
@@ -142,10 +142,10 @@ function Home() {
                   <>
                     Logging in JavaScript/TypeScript can unfortunately tend to
                     be much more difficult than just writing a string to the
-                    console. Log-More has plenty of built in functionality to
+                    console. Log-Right has plenty of built in functionality to
                     support various methods of capturing this data to the source
                     of your choice - but if you just want to write a string to
-                    the console, Log-More has you covered there too!
+                    the console, Log-Right has you covered there too!
                   </>
                 }
                 Icon={ImNewspaper}
@@ -167,7 +167,7 @@ function Home() {
 
                 <div className="row">
                   <p>
-                    Log-More introduces the Result object which can be returned
+                    Log-Right introduces the Result object which can be returned
                     from any function or process to indicate if it was
                     successful (and if not, what failed). The verification
                     function can then be called to do the following:
@@ -247,13 +247,13 @@ export const greaterThanFive(param: number): Result<GreaterThanFiveReturn> {
                     styles.horizontalAlign
                   )}>
                   <div className="col">
-                    <h3>Using Log-More Return Types</h3>
+                    <h3>Using Log-Right Return Types</h3>
                   </div>
                 </div>
 
                 <div className="row">
                   <p>
-                    Log-More aims to standardize returning values and/or errors
+                    Log-Right aims to standardize returning values and/or errors
                     from functions. The success and error static functions in
                     the Result class can be used to quickly generate a Result
                     object instance. The success function also accepts return
@@ -354,7 +354,7 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
                 description={
                   <>
                     Aside from the core functionality that comes with the
-                    log-more package, additional functionality can be added
+                    log-right package, additional functionality can be added
                     through our growing list of plugin packages.
                   </>
                 }
@@ -362,7 +362,7 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
               />
               <Feature
                 title="TypeScript Support"
-                description="Log-More is created using TypeScript, so all the types associated with the package are fully supported, available for use, and up to date."
+                description="Log-Right is created using TypeScript, so all the types associated with the package are fully supported, available for use, and up to date."
                 Icon={SiTypescript}
               />
               <Feature
@@ -394,7 +394,7 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
                 title="Configuration"
                 description={
                   <>
-                    Log-More can be configuration as little or as much as the
+                    Log-Right can be configuration as little or as much as the
                     user desires. All handlers, events, and logs are
                     customizable; however, we defined various default
                     configurations sets, so this is not required.
@@ -420,7 +420,7 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
 
                   styles.sectionTitle
                 )}>
-                <h3>Are you ready to get started with Log-More?</h3>
+                <h3>Are you ready to get started with Log-Right?</h3>
               </div>
 
               <div className={clsx("row", styles.horizontalAlign)}>
@@ -437,7 +437,7 @@ export const numberProcessing(param: number): Result<GreaterThanFiveReturn> {
                     "button button--secondary button--outline button--lg padding--md margin-vert--lg margin-right--sm margin-left--sm",
                     styles.getStarted
                   )}
-                  to={useBaseUrl("docs/log-more")}>
+                  to={useBaseUrl("docs/log-right")}>
                   View Documentation
                 </Link>
                 <Link

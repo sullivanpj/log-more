@@ -1,6 +1,6 @@
 module.exports = {
   docsSidebar: {
-    Packages: ["log-more", "base"],
+    Packages: ["log-right", "base"],
   },
   learningSidebar: {
     Learning: [

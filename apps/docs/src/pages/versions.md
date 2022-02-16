@@ -6,12 +6,12 @@ hide_title: true
 
 [Home](/)
 
-# Log-More Versioning
+# Log-Right Versioning
 
-There is currently only one published version of the `log-more` package.
+There is currently only one published version of the `log-right` package.
 
 ## Package Versions
 
 |  Package | Description | Version |
 |  --- | --- | --- |
-|  [log-more](docs/log-more/) | The current version of the `log-more` package | **Latest**
+|  [log-right](docs/log-right/) | The current version of the `log-right` package | **Latest**

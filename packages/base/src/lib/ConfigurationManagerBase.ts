@@ -1,16 +1,16 @@
 import { captureStringToConsole } from "./captureStringToConsole";
-import { DefaultLogMoreConfigBase, DefaultEventTypes } from "./constants";
+import { DefaultLogRightConfigBase, DefaultEventTypes } from "./constants";
 import { getConfig } from "./getConfig";
 import { setConfig } from "./setConfig";
 import {
-  LogMoreConfigBase,
+  LogRightConfigBase,
   Indexable,
   TypedIndexable,
   LogEventConfigBase,
 } from "./types";
 
 /**
- * A static class used to manage the log-more configuration data
+ * A static class used to manage the log-right configuration data
  */
 export class ConfigurationManagerBase {
   /**
@@ -19,9 +19,9 @@ export class ConfigurationManagerBase {
    * @returns A boolean indicating if the result of the function was successful or not
    */
   public static init = <
-    TLogMoreConfig extends LogMoreConfigBase = LogMoreConfigBase
+    TLogRightConfig extends LogRightConfigBase = LogRightConfigBase
   >(
-    defaultConfig: TLogMoreConfig = DefaultLogMoreConfigBase as TLogMoreConfig
+    defaultConfig: TLogRightConfig = DefaultLogRightConfigBase as TLogRightConfig
   ): boolean => {
     return setConfig({ ...defaultConfig });
   };
@@ -30,7 +30,7 @@ export class ConfigurationManagerBase {
    * Get the current log configuration object
    * @returns The logging configuration object
    */
-  public static getConfig = (): LogMoreConfigBase => {
+  public static getConfig = (): LogRightConfigBase => {
     let config = getConfig();
     if (!config) {
       ConfigurationManagerBase.init();
@@ -38,11 +38,11 @@ export class ConfigurationManagerBase {
       config = getConfig();
       if (!config) {
         captureStringToConsole(
-          "Log-More could not retrieve configuration from memory.",
+          "log-right could not retrieve configuration from memory.",
           DefaultEventTypes.ERROR
         );
 
-        return { ...DefaultLogMoreConfigBase };
+        return { ...DefaultLogRightConfigBase };
       }
     }
 
@@ -96,8 +96,8 @@ export class ConfigurationManagerBase {
    * Set the configuration for how logging should be handled
    * @param params - The configuration to use for logging going forward
    */
-  public static setConfig = (params?: Partial<LogMoreConfigBase>): boolean => {
-    const config: LogMoreConfigBase = {
+  public static setConfig = (params?: Partial<LogRightConfigBase>): boolean => {
+    const config: LogRightConfigBase = {
       ...ConfigurationManagerBase.getConfig(),
       ...params,
       logEventRegistry: ConfigurationManagerBase.getLogEventRegistry(),

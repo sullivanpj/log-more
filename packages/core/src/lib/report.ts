@@ -1,4 +1,4 @@
-import { FormattedData, Report } from "@log-more/base";
+import { FormattedData, Report } from "@log-right/base";
 import { ConfigurationManager } from "./ConfigurationManager";
 import { isReportable } from "./isReportable";
 import { isResult } from "./isResult";
