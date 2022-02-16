@@ -11,7 +11,6 @@
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sullivanpj/log-more?style=for-the-badge&logo=git)](https://github.com/sullivanpj/log-more)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sullivanpj/log-more?style=for-the-badge&logo=github)](https://github.com/sullivanpj/log-more)
 [![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg?style=for-the-badge)](https://liberamanifesto.com)
-[![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 # Features
 
@@ -49,7 +48,7 @@ import { ConfigurationManager, validate, write, Result } from "log-more";
 
 # Configuration
 
-Once the package has been installed, you can use the [ConfigurationManager](https://sullivanpj.github.io/log-more/classes/ConfigurationManager.html) to specify how you want your application's logging to behave.
+Once the package has been installed, you can use the [ConfigurationManager](https://sullivanpj.github.io/log-more/docs/log-more.configurationmanager) to specify how you want your application's logging to behave.
 
 ```ts
 import { ConfigurationManager, LogEvent } from "log-more";
@@ -68,7 +67,7 @@ ConfigurationManager.setConfig({
 });
 ```
 
-The full list of configuration parameters can be found in our [documentation](https://sullivanpj.github.io/log-more/modules.html#Configuration).
+The full list of configuration parameters can be found in our [documentation](https://sullivanpj.github.io/log-more/docs/log-more.logmoreconfig).
 
 # 📓 Logging 📓
 

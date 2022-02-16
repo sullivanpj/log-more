@@ -1,5 +1,9 @@
 {
   "name": "@log-more/base",
+  "author": "Patrick Sullivan <patrick.joseph.sullivan@protonmail.com> (https://github.com/sullivanpj)",
+  "repository":"https://github.com/sullivanpj/log-more",
+  "license": "MIT",
+  "description": "📓 Log-More is a light-weight (but expansive) javascript logging library with a focus on developer experience and simplifying the process of error handling, reporting, and troubleshooting.",
   "version": "0.0.1",
   "type": "commonjs",
   "scripts": {
