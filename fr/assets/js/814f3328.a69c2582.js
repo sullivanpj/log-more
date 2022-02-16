@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunklog_more=globalThis.webpackChunklog_more||[]).push([[2535],{1848:l=>{l.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/log-more/fr/blog/welcome"},{"title":"Hello","permalink":"/log-more/fr/blog/hello-world"},{"title":"Hola","permalink":"/log-more/fr/blog/hola"}]}')}}]);

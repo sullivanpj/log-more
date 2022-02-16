@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunklog_more=globalThis.webpackChunklog_more||[]).push([[4121],{1665:a=>{a.exports=JSON.parse('[{"name":"learning","permalink":"/log-more/docs/tags/learning","count":4},{"name":"getting started","permalink":"/log-more/docs/tags/getting-started","count":2},{"name":"installation","permalink":"/log-more/docs/tags/installation","count":2}]')}}]);

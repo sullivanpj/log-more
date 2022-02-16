@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklog_right=globalThis.webpackChunklog_right||[]).push([[820],{4504:l=>{l.exports=JSON.parse('{"allTagsPath":"/log-right/blog/tags","slug":"/log-right/blog/tags/hello","name":"hello","count":2,"permalink":"/log-right/blog/tags/hello"}')}}]);

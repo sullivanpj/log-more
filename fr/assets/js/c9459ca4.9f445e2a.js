@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunklog_more=globalThis.webpackChunklog_more||[]).push([[3137],{5191:o=>{o.exports=JSON.parse('{"allTagsPath":"/log-more/fr/blog/tags","slug":"/log-more/fr/blog/tags/hola","name":"hola","count":1,"permalink":"/log-more/fr/blog/tags/hola"}')}}]);

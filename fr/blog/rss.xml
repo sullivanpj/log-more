@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Log-More Blog</title>
-        <link>https://sullivanpj.github.io/log-more/fr/blog</link>
-        <description>Log-More Blog</description>
+        <title>Log-Right Blog</title>
+        <link>https://sullivanpj.github.io/log-right/fr/blog</link>
+        <description>Log-Right Blog</description>
         <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://sullivanpj.github.io/log-more/fr/blog/welcome</link>
+            <link>https://sullivanpj.github.io/log-right/fr/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Blog features are powered by the blog plugin. Simply add files to the blog directory. It supports tags as well!]]></description>
@@ -20,7 +20,7 @@
         </item>
         <item>
             <title><![CDATA[Hello]]></title>
-            <link>https://sullivanpj.github.io/log-more/fr/blog/hello-world</link>
+            <link>https://sullivanpj.github.io/log-right/fr/blog/hello-world</link>
             <guid>hello-world</guid>
             <pubDate>Wed, 29 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to this blog. This blog is created with Docusaurus 2 alpha.]]></description>
@@ -30,7 +30,7 @@
         </item>
         <item>
             <title><![CDATA[Hola]]></title>
-            <link>https://sullivanpj.github.io/log-more/fr/blog/hola</link>
+            <link>https://sullivanpj.github.io/log-right/fr/blog/hola</link>
             <guid>hola</guid>
             <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
