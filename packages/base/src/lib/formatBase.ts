@@ -14,7 +14,7 @@ export const formatBase = <TFormatted extends FormattedData = FormattedData>(
 
   return {
     id: nanoid(32),
-    name: "LOG_MORE_GET_CONFIG_SUCCESS",
+    name: "LOG_RIGHT_GET_CONFIG_SUCCESS",
     message: "Success",
     type: DefaultEventTypes.SUCCESS,
     severity: SeverityTypes.NONE,

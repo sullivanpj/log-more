@@ -2,13 +2,13 @@ import {
   ConfigurationManagerBase,
   Indexable,
   TypedIndexable,
-} from "@log-more/base";
-import { DefaultLogMoreConfig } from "./constants";
+} from "@log-right/base";
+import { DefaultLogRightConfig } from "./constants";
 import { Result } from "./Result";
-import { LogEventConfig, LogMoreConfig } from "./types";
+import { LogEventConfig, LogRightConfig } from "./types";
 
 /**
- * A static class used to manage the log-more configuration data
+ * A static class used to manage the log-right configuration data
  */
 export class ConfigurationManager {
   /**
@@ -17,12 +17,12 @@ export class ConfigurationManager {
    * @returns A boolean indicating if the result of the function was successful or not
    */
   public static init(
-    defaultConfig: LogMoreConfig = DefaultLogMoreConfig
+    defaultConfig: LogRightConfig = DefaultLogRightConfig
   ): Result {
     try {
-      if (!ConfigurationManagerBase.init<LogMoreConfig>(defaultConfig)) {
+      if (!ConfigurationManagerBase.init<LogRightConfig>(defaultConfig)) {
         return Result.error(
-          "An error occurred initializing Log-More configuration data."
+          "An error occurred initializing log-right configuration data."
         );
       }
 
@@ -36,22 +36,22 @@ export class ConfigurationManager {
    * Get the current log configuration object
    * @returns The logging configuration object
    */
-  public static getConfig = (): Result<LogMoreConfig> => {
+  public static getConfig = (): Result<LogRightConfig> => {
     try {
-      let config: LogMoreConfig | undefined =
-        ConfigurationManagerBase.getConfig() as LogMoreConfig;
+      let config: LogRightConfig | undefined =
+        ConfigurationManagerBase.getConfig() as LogRightConfig;
       if (!config) {
         const result = ConfigurationManager.init();
         if (!result.validate()) {
           return result;
         }
 
-        config = ConfigurationManagerBase.getConfig() as LogMoreConfig;
+        config = ConfigurationManagerBase.getConfig() as LogRightConfig;
       }
 
       if (!config) {
         return Result.error(
-          "Log-More could not retrieve configuration from memory."
+          "log-right could not retrieve configuration from memory."
         );
       }
 
@@ -76,7 +76,7 @@ export class ConfigurationManager {
       const data = (result.data as unknown as Indexable)?.[name];
       if (!data) {
         return Result.error(
-          "Log-More could not retrieve configuration from memory."
+          "log-right could not retrieve configuration from memory."
         );
       }
 
@@ -149,11 +149,11 @@ export class ConfigurationManager {
    * Set the configuration for how logging should be handled
    * @param params - The configuration to use for logging going forward
    */
-  public static setConfig = (params?: Partial<LogMoreConfig>): Result => {
+  public static setConfig = (params?: Partial<LogRightConfig>): Result => {
     try {
       if (!ConfigurationManagerBase.setConfig(params)) {
         return Result.error(
-          "Log-More was unable to update configuration object. "
+          "log-right was unable to update configuration object. "
         );
       }
 
@@ -176,7 +176,7 @@ export class ConfigurationManager {
     try {
       if (!ConfigurationManagerBase.setConfigItem(name, value)) {
         return Result.error({
-          message: "Log-More was unable to update configuration object. ",
+          message: "log-right was unable to update configuration object. ",
           details: `Item Name: "${name}" / Item Value: "${value}"`,
         });
       }

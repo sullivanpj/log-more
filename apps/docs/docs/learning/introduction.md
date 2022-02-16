@@ -9,9 +9,9 @@ tags:
 
 # Introduction
 
-Log-More is a downloadable package that provides various utilities for detecting, reporting, and handling errors in a JavaScript/TypeScript application. 
+Log-Right is a downloadable package that provides various utilities for detecting, reporting, and handling errors in a JavaScript/TypeScript application. 
 
-Developers can [download and install](installation.md) log-more using their preferred package manager.
+Developers can [download and install](installation.md) log-right using their preferred package manager.
 
 
 

@@ -1,4 +1,4 @@
-import { isResultBase } from "@log-more/base";
+import { isResultBase } from "@log-right/base";
 import { Result } from "./Result";
 
 /**

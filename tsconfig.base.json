@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@log-more/base": ["packages/base/src/index.ts"],
-      "log-more": ["packages/core/src/index.ts"]
+      "@log-right/base": ["packages/base/src/index.ts"],
+      "log-right": ["packages/core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

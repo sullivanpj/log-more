@@ -52,7 +52,7 @@ async function main() {
         const homeLink = line.match(/\[Home\]\(.\/index\.md\) &gt; (.*)/);
         if (homeLink) {
           // Skip the breadcrumb for the toplevel index file.
-          if (id?.toUpperCase() !== "log-more".toUpperCase()) {
+          if (id?.toUpperCase() !== "log-right".toUpperCase()) {
             output.push(homeLink[1]);
           }
           skip = true;

@@ -7,7 +7,7 @@ import { Locale } from "date-fns";
 export type Severity = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 99;
 
 /**
- * The event types provided by default by `Log-More`
+ * The event types provided by default by `log-right`
  */
 export type DefaultEventType =
   | "SUCCESS"
@@ -329,9 +329,9 @@ export interface UserConfig {
 }
 
 /**
- * Specifications for the base level of configuration parameters Log-More accepts
+ * Specifications for the base level of configuration parameters log-right accepts
  */
-export type LogMoreConfigBase<
+export type LogRightConfigBase<
   TLogEventConfig extends LogEventConfigBase = LogEventConfigBase,
   TUserConfig extends UserConfig = UserConfig
 > = TLogEventConfig &

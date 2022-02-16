@@ -14,3 +14,4 @@ hide_title: true
 |  Package | Description |
 |  --- | --- |
 |  [log-more](./log-more.md) |  |
+|  [log-right](./log-right.md) |  |

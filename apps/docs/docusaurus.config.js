@@ -1,13 +1,13 @@
 module.exports = {
-  title: "Log-More",
+  title: "Log-Right",
   tagline: "Making the world a better place... one log at a time",
   url: "https://sullivanpj.github.io",
-  baseUrl: "/log-more/",
+  baseUrl: "/log-right/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "SullivanPJ",
-  projectName: "log-more",
+  projectName: "log-right",
   titleDelimiter: "📓",
   trailingSlash: false,
   i18n: {
@@ -31,7 +31,7 @@ module.exports = {
       {
         name: "keywords",
         content:
-          "log-more, logmore, log, logging, reporting, error, error handler",
+          "log-right, logright, log, logging, reporting, error, error handler",
       },
     ],
     prism: {
@@ -50,17 +50,17 @@ module.exports = {
       isCloseable: true,
     },
     navbar: {
-      title: "Log-More",
+      title: "Log-Right",
 
       logo: {
-        alt: "Log-More",
+        alt: "Log-Right",
         srcDark: "img/logo.png",
         src: "img/logo-light.png",
       },
       items: [
         {
-          to: "docs/log-more/",
-          activeBasePath: "docs/log-more",
+          to: "docs/log-right/",
+          activeBasePath: "docs/log-right",
           label: "Docs",
           position: "left",
         },
@@ -88,7 +88,7 @@ module.exports = {
         },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/sullivanpj/log-more",
+          href: "https://github.com/sullivanpj/log-right",
           label: "GitHub",
           position: "right",
           "aria-label": "GitHub repository",
@@ -103,7 +103,7 @@ module.exports = {
           items: [
             {
               label: "Documentation",
-              to: "docs/log-more/",
+              to: "docs/log-right/",
             },
             {
               label: "API Reference",
@@ -141,15 +141,15 @@ module.exports = {
           items: [
             {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/log-more",
+              href: "https://stackoverflow.com/questions/tagged/log-right",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/log-more",
+              href: "https://discordapp.com/invite/log-right",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/log-more",
+              href: "https://twitter.com/log-right",
             },
           ],
         },
@@ -162,7 +162,7 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/sullivanpj/log-more",
+              href: "https://github.com/sullivanpj/log-right",
             },
             {
               label: "Author",
@@ -176,11 +176,11 @@ module.exports = {
         },
       ],
       logo: {
-        alt: "Log-More",
+        alt: "Log-Right",
         src: "img/logo-footer.png",
-        href: "https://github.com/sullivanpj/log-more",
+        href: "https://github.com/sullivanpj/log-right",
       },
-      copyright: `Copyright © ${new Date().getFullYear()} 📓Log-More`,
+      copyright: `Copyright © ${new Date().getFullYear()} 📓Log-Right`,
     },
   },
   themes: ["@docusaurus/theme-live-codeblock"],
@@ -190,7 +190,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/sullivanpj/log-more/tree/main/apps/docs",
+          editUrl:
+            "https://github.com/sullivanpj/log-right/tree/main/apps/docs",
         },
         blog: {
           showReadingTime: true,

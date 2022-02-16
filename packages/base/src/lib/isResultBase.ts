@@ -10,7 +10,7 @@ export const isResultBase = (param: unknown): param is ResultBase => {
     const result: ResultBase | undefined = param as ResultBase;
     if (
       !!result?.instanceId &&
-      result.instanceId === LOG_MORE_GLOBAL_RESULT_INSTANCE_ID
+      result.instanceId === LOG_RIGHT_GLOBAL_RESULT_INSTANCE_ID
     ) {
       return true;
     }

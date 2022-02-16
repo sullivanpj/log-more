@@ -1,13 +1,13 @@
 import {
   captureToConsole,
   DefaultEventTypes,
-  DefaultLogMoreConfigBase,
+  DefaultLogRightConfigBase,
   SeverityTypes,
   TypedIndexable,
-} from "@log-more/base";
+} from "@log-right/base";
 import { format } from "./format";
 import { report } from "./report";
-import { LogEventConfig, LogMoreConfig } from "./types";
+import { LogEventConfig, LogRightConfig } from "./types";
 
 export const DefaultLogEventConfig: TypedIndexable<Partial<LogEventConfig>> = {
   [DefaultEventTypes.EXCEPTION]: {
@@ -36,8 +36,8 @@ export const DefaultLogEventConfig: TypedIndexable<Partial<LogEventConfig>> = {
   },
 } as const;
 
-export const DefaultLogMoreConfig: LogMoreConfig<LogEventConfig> = {
-  ...DefaultLogMoreConfigBase,
+export const DefaultLogRightConfig: LogRightConfig<LogEventConfig> = {
+  ...DefaultLogRightConfigBase,
   logEventRegistry: DefaultLogEventConfig as TypedIndexable<LogEventConfig>,
   format,
   capture: captureToConsole,
